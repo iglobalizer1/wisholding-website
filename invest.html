@@ -3,26 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invest | Wish Holdings</title>
+    <title>Investor Relations | Wish Holdings Pvt Ltd</title>
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <!-- Fonts / Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .invest-hero {
-            padding-top: 150px;
-            padding-bottom: var(--spacing-xl);
-            background: linear-gradient(180deg, rgba(10, 17, 40, 0.95) 0%, rgba(28, 37, 65, 0.9) 100%), url('https://images.unsplash.com/photo-1551244072-5d12893278ab?auto=format&fit=crop&q=80&w=1920');
-            background-size: cover;
-            background-position: center;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
         .ecosystem-number-badge {
-            width: 45px;
-            height: 45px;
+            width: 48px;
+            height: 48px;
             border-radius: 50%;
-            background: var(--color-accent);
-            color: var(--color-primary);
+            background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-logo-navy) 100%);
+            color: #FFFFFF;
             font-size: 1.3rem;
             font-weight: 800;
             display: flex;
@@ -30,18 +22,24 @@
             justify-content: center;
             margin-bottom: var(--spacing-sm);
             font-family: var(--font-heading);
+            box-shadow: 0 4px 14px rgba(2, 132, 199, 0.3);
         }
         /* Accordion */
         .faq-item {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            background: #FFFFFF;
+            border: 1px solid var(--color-border);
             border-radius: var(--border-radius-md);
             margin-bottom: var(--spacing-xs);
             overflow: hidden;
+            box-shadow: var(--shadow-card);
+            transition: var(--transition-normal);
+        }
+        .faq-item:hover {
+            border-color: var(--color-border-hover);
         }
         .faq-question {
             padding: var(--spacing-md);
-            font-weight: 600;
+            font-weight: 700;
             color: var(--color-text-heading);
             cursor: pointer;
             display: flex;
@@ -53,7 +51,7 @@
             color: var(--color-text-body);
             font-size: 0.95rem;
             display: none;
-            line-height: 1.6;
+            line-height: 1.65;
         }
         .faq-item.active .faq-answer {
             display: block;
@@ -65,45 +63,46 @@
 </head>
 <body>
 
-    <!-- Invest Hero -->
-    <section class="invest-hero">
+    <!-- Inner Hero Header -->
+    <section class="inner-hero">
+        <div class="inner-hero-bg"></div>
         <div class="container text-center">
             <span class="section-subtitle">Ethical Ocean Investment</span>
-            <h1 class="text-white" style="margin-bottom: 6px;">An Ocean of Returns</h1>
-            <p style="font-size: 1.3rem; color: var(--color-accent); font-family: var(--font-heading); font-weight: 700; margin-bottom: var(--spacing-sm);">
+            <h1>An Ocean of Returns</h1>
+            <p style="font-size: 1.3rem; color: var(--color-accent); font-family: var(--font-heading); font-weight: 700; margin: 8px 0;">
                 Built on Tuna, Infrastructure, and Ecosystem Expansion
             </p>
-            <p style="max-width: 700px; margin: 0 auto var(--spacing-lg) auto; font-size: 1.1rem; color: var(--color-text-body); font-weight: 500;">
-                Building the Indian Ocean's premier sustainable seafood and eco-tourism enterprise.
+            <p style="max-width: 720px; margin: 0 auto var(--spacing-lg) auto; font-size: 1.1rem; color: var(--color-text-body); font-weight: 500;">
+                Building the Indian Ocean's premier sustainable seafood, cold-chain logistics, and eco-tourism enterprise.
             </p>
             <div style="display: flex; justify-content: center; gap: var(--spacing-sm); flex-wrap: wrap;">
                 <a href="contact.html?type=investor" class="btn btn-primary"><i class="fas fa-calendar-alt" style="margin-right: 8px;"></i> Schedule a Call</a>
-                <button onclick="alert('Downloading Capability Deck (Wish_Holdings_Investor_Deck.pdf)...')" class="btn btn-outline"><i class="fas fa-download" style="margin-right: 8px;"></i> Download Capability Deck</button>
+                <a href="#investor-form" class="btn btn-outline"><i class="fas fa-file-signature" style="margin-right: 8px;"></i> Submit Investor Form</a>
             </div>
         </div>
     </section>
 
     <!-- Current Operations & Future Vision Comparison -->
-    <section class="section-padding" style="background-color: var(--color-primary);">
+    <section class="section-padding bg-light">
         <div class="container">
             <div class="grid-2" style="gap: var(--spacing-xl);">
                 
                 <!-- What Exists Today -->
                 <div class="glass-card reveal">
                     <span class="section-subtitle">Current Operations</span>
-                    <h3 class="text-white" style="margin-bottom: var(--spacing-xs);">What Exists Today</h3>
-                    <p style="margin-bottom: var(--spacing-md); line-height: 1.6;">
+                    <h3 style="margin-bottom: var(--spacing-xs);">What Exists Today</h3>
+                    <p style="margin-bottom: var(--spacing-md); line-height: 1.65;">
                         Our operational foundation is built on proven tuna processing at Himmafushi, delivering export-grade Yellowfin and Skipjack Tuna to global markets.
                     </p>
 
-                    <div style="background: var(--color-surface-subtle); padding: var(--spacing-md); border-radius: var(--border-radius-md); margin-bottom: var(--spacing-sm);">
-                        <h4 class="text-white" style="margin-bottom: 4px;">Himmafushi Processing Plant</h4>
+                    <div style="background: var(--color-surface-subtle); border: 1px solid var(--color-border); padding: var(--spacing-md); border-radius: var(--border-radius-md); margin-bottom: var(--spacing-sm);">
+                        <h4 style="margin-bottom: 4px; color: var(--color-logo-navy);"><i class="fas fa-industry text-brand" style="margin-right: 6px;"></i> Himmafushi Processing Plant</h4>
                         <p style="font-size: 0.9rem; margin-bottom: 10px;">Currently processing Yellowfin and Skipjack Tuna with full traceability, HACCP/ISO certifications, and export-ready quality.</p>
                         <a href="processing.html" class="btn-text">View Processing <i class="fas fa-arrow-right"></i></a>
                     </div>
 
-                    <div style="background: var(--color-surface-subtle); padding: var(--spacing-md); border-radius: var(--border-radius-md);">
-                        <h4 class="text-white" style="margin-bottom: 4px;">Live Product Lines</h4>
+                    <div style="background: var(--color-surface-subtle); border: 1px solid var(--color-border); padding: var(--spacing-md); border-radius: var(--border-radius-md);">
+                        <h4 style="margin-bottom: 4px; color: var(--color-logo-navy);"><i class="fas fa-boxes-stacked text-brand" style="margin-right: 6px;"></i> Live Product Lines</h4>
                         <p style="font-size: 0.9rem; margin-bottom: 10px;">Premium Yellowfin and Skipjack Tuna products available for export today, with established supply chains and buyer relationships.</p>
                         <a href="yellowfin.html" class="btn-text">View Products <i class="fas fa-arrow-right"></i></a>
                     </div>
@@ -112,16 +111,16 @@
                 <!-- What Scales Next -->
                 <div class="glass-card reveal" style="transition-delay: 0.1s;">
                     <span class="section-subtitle">Future Vision</span>
-                    <h3 class="text-white" style="margin-bottom: var(--spacing-xs);">What Scales Next</h3>
-                    <p style="margin-bottom: var(--spacing-md); line-height: 1.6;">
+                    <h3 style="margin-bottom: var(--spacing-xs);">What Scales Next</h3>
+                    <p style="margin-bottom: var(--spacing-md); line-height: 1.65;">
                         The Future Vision expands our ecosystem across three harbour islands, value-added brands, and eco-tourism experiences.
                     </p>
 
                     <ul style="display: flex; flex-direction: column; gap: 12px; margin-bottom: var(--spacing-md); font-size: 0.95rem; color: var(--color-text-body);">
-                        <li><i class="fas fa-check text-gold" style="margin-right: 8px;"></i> <strong>Islands & Plants:</strong> Kandholhudhoo and Kanandhoo processing plants, reef fish operations, and expanded cold chain infrastructure.</li>
-                        <li><i class="fas fa-check text-gold" style="margin-right: 8px;"></i> <strong>Value-Added Brands:</strong> AQUATUNA™, AZURISH™, CORALPURE™ product lines, and GLACIALA™ ice systems roll-out.</li>
-                        <li><i class="fas fa-check text-gold" style="margin-right: 8px;"></i> <strong>Tourism:</strong> AZUREÍN™ and PELAGORA™ villas, Catch of Wish restaurant, and eco-tourism experiences.</li>
-                        <li><i class="fas fa-check text-gold" style="margin-right: 8px;"></i> <strong>Cold Chain Network:</strong> Frostline multi-island network expansion and advanced ice production systems.</li>
+                        <li><i class="fas fa-check text-brand" style="margin-right: 8px;"></i> <strong>Islands & Plants:</strong> Kandholhudhoo and Kanandhoo processing plants, reef fish operations, and expanded cold chain infrastructure.</li>
+                        <li><i class="fas fa-check text-brand" style="margin-right: 8px;"></i> <strong>Value-Added Brands:</strong> AQUATUNA™, AZURISH™, CORALPURE™ product lines, and GLACIALA™ ice systems roll-out.</li>
+                        <li><i class="fas fa-check text-brand" style="margin-right: 8px;"></i> <strong>Tourism:</strong> AZUREÍN™ and PELAGORA™ luxury eco-villas, Catch of Wish restaurant, and conservation tours.</li>
+                        <li><i class="fas fa-check text-brand" style="margin-right: 8px;"></i> <strong>Cold Chain Network:</strong> Frostline multi-island network expansion and cryogenic -60°C blast freezing systems.</li>
                     </ul>
 
                     <a href="way-forward.html" class="btn btn-primary" style="width: 100%; text-align: center;"><i class="fas fa-compass" style="margin-right: 8px;"></i> View Future Vision</a>
@@ -132,31 +131,32 @@
     </section>
 
     <!-- Investment Thesis -->
-    <section class="section-padding" style="background-color: var(--color-secondary);">
+    <section class="section-padding bg-subtle">
         <div class="container">
             <div class="text-center reveal" style="max-width: 650px; margin: 0 auto var(--spacing-xl) auto;">
                 <span class="section-subtitle">Investment Thesis</span>
-                <h2 class="text-white">Why This Structure Works</h2>
+                <h2>Why This Structure Works</h2>
+                <p>A vertically integrated oceanic enterprise providing strong defensibility, multiple cash flow pillars, and ESG leadership.</p>
             </div>
 
             <div class="grid-2" style="gap: var(--spacing-md);">
                 <div class="trust-card reveal" style="transition-delay: 0.1s;">
-                    <h4 class="text-white" style="margin-bottom: 6px;"><i class="fas fa-shield-alt text-gold" style="margin-right: 8px;"></i> Supply Security</h4>
+                    <h4 style="margin-bottom: 6px;"><i class="fas fa-shield-alt text-brand" style="margin-right: 8px;"></i> Supply Security</h4>
                     <p>Direct relationships with Maldivian fishermen, company-owned harbour islands, and established processing infrastructure ensure consistent supply and operational control.</p>
                 </div>
 
                 <div class="trust-card reveal" style="transition-delay: 0.2s;">
-                    <h4 class="text-white" style="margin-bottom: 6px;"><i class="fas fa-temperature-low text-gold" style="margin-right: 8px;"></i> Cold Chain Excellence</h4>
+                    <h4 style="margin-bottom: 6px;"><i class="fas fa-temperature-low text-brand" style="margin-right: 8px;"></i> Cold Chain Excellence</h4>
                     <p>Unbroken cold chain from catch to export, with multi-island storage networks and advanced ice systems maintaining export-grade quality.</p>
                 </div>
 
                 <div class="trust-card reveal" style="transition-delay: 0.3s;">
-                    <h4 class="text-white" style="margin-bottom: 6px;"><i class="fas fa-leaf text-gold" style="margin-right: 8px;"></i> ESG Alignment</h4>
+                    <h4 style="margin-bottom: 6px;"><i class="fas fa-leaf text-brand" style="margin-right: 8px;"></i> ESG Alignment</h4>
                     <p>Sustainable pole-and-line fishing, traceability, community partnerships, and environmental protocols align with responsible investment criteria.</p>
                 </div>
 
                 <div class="trust-card reveal" style="transition-delay: 0.4s;">
-                    <h4 class="text-white" style="margin-bottom: 6px;"><i class="fas fa-chart-line text-gold" style="margin-right: 8px;"></i> Brand Equity</h4>
+                    <h4 style="margin-bottom: 6px;"><i class="fas fa-chart-line text-brand" style="margin-right: 8px;"></i> Brand Equity</h4>
                     <p>Value-added brand portfolio (AQUATUNA, AZURISH, CORALPURE) and eco-tourism halo create diversified revenue streams and premium positioning.</p>
                 </div>
             </div>
@@ -164,138 +164,140 @@
     </section>
 
     <!-- Why Choose Us -->
-    <section class="section-padding" style="background-color: var(--color-primary);">
+    <section class="section-padding bg-light">
         <div class="container">
             <div class="text-center reveal" style="max-width: 650px; margin: 0 auto var(--spacing-xl) auto;">
                 <span class="section-subtitle">Why Choose Us</span>
-                <h2 class="text-white">Why Wish Holdings</h2>
+                <h2>Why Wish Holdings</h2>
+                <p>Combining world-class seafood standards with environmental stewardship.</p>
             </div>
 
             <div class="grid-3" style="gap: var(--spacing-md);">
                 <div class="glass-card reveal">
-                    <h4 class="text-gold" style="margin-bottom: 4px;">Sustainable Tuna</h4>
+                    <h4 class="text-brand" style="margin-bottom: 6px;"><i class="fas fa-fish" style="margin-right: 6px;"></i> Sustainable Tuna</h4>
                     <p style="font-size: 0.9rem;">Line-caught, pole-and-line methods ensuring marine preservation.</p>
                 </div>
 
                 <div class="glass-card reveal">
-                    <h4 class="text-gold" style="margin-bottom: 4px;">Traceability</h4>
-                    <p style="font-size: 0.9rem;">Full catch-to-export tracking system.</p>
+                    <h4 class="text-brand" style="margin-bottom: 6px;"><i class="fas fa-barcode" style="margin-right: 6px;"></i> Traceability</h4>
+                    <p style="font-size: 0.9rem;">Full vessel-to-export digital tracking system meeting EU/FDA requirements.</p>
                 </div>
 
                 <div class="glass-card reveal">
-                    <h4 class="text-gold" style="margin-bottom: 4px;">Premium Seafood</h4>
-                    <p style="font-size: 0.9rem;">World-class processing facilities and export grade quality.</p>
+                    <h4 class="text-brand" style="margin-bottom: 6px;"><i class="fas fa-award" style="margin-right: 6px;"></i> Premium Seafood</h4>
+                    <p style="font-size: 0.9rem;">World-class processing facilities delivering export-grade Yellowfin and Skipjack.</p>
                 </div>
 
                 <div class="glass-card reveal">
-                    <h4 class="text-gold" style="margin-bottom: 4px;">Cold Chain</h4>
-                    <p style="font-size: 0.9rem;">Unbroken cold chain excellence from ocean harvest to destination.</p>
+                    <h4 class="text-brand" style="margin-bottom: 6px;"><i class="fas fa-snowflake" style="margin-right: 6px;"></i> Cold Chain</h4>
+                    <p style="font-size: 0.9rem;">Unbroken cold chain excellence from ocean harvest to destination airport.</p>
                 </div>
 
                 <div class="glass-card reveal">
-                    <h4 class="text-gold" style="margin-bottom: 4px;">Eco-Tourism</h4>
-                    <p style="font-size: 0.9rem;">Luxury eco-conscious island resort experiences.</p>
+                    <h4 class="text-brand" style="margin-bottom: 6px;"><i class="fas fa-hotel" style="margin-right: 6px;"></i> Eco-Tourism</h4>
+                    <p style="font-size: 0.9rem;">Luxury eco-conscious island resort experiences on private harbour islands.</p>
                 </div>
 
                 <div class="glass-card reveal">
-                    <h4 class="text-gold" style="margin-bottom: 4px;">Value-Added</h4>
-                    <p style="font-size: 0.9rem;">AQUATUNA, AZURISH, and CORALPURE product lines.</p>
+                    <h4 class="text-brand" style="margin-bottom: 6px;"><i class="fas fa-boxes-stacked" style="margin-right: 6px;"></i> Value-Added</h4>
+                    <p style="font-size: 0.9rem;">AQUATUNA™, AZURISH™, and CORALPURE™ product lines for global markets.</p>
                 </div>
 
                 <div class="glass-card reveal" style="grid-column: 1 / -1; text-align: center;">
-                    <h4 class="text-gold" style="margin-bottom: 4px;">Ethical Investment</h4>
-                    <p style="font-size: 0.95rem;">Building a model of responsible growth, social impact, and long-term value.</p>
+                    <h4 class="text-brand" style="margin-bottom: 6px;"><i class="fas fa-hand-holding-heart" style="margin-right: 6px;"></i> Ethical Investment</h4>
+                    <p style="font-size: 0.95rem; max-width: 750px; margin: 0 auto;">Building a model of responsible growth, social impact, and long-term shareholder value in the Indian Ocean.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- The Ecosystem You're Investing In -->
-    <section class="section-padding" style="background-color: var(--color-secondary);">
+    <section class="section-padding bg-subtle">
         <div class="container">
             <div class="text-center reveal" style="max-width: 650px; margin: 0 auto var(--spacing-xl) auto;">
                 <span class="section-subtitle">The Ecosystem</span>
-                <h2 class="text-white">The Ecosystem You're Investing In</h2>
+                <h2>The Ecosystem You're Investing In</h2>
+                <p>Five interconnected verticals creating a unified commercial powerhouse.</p>
             </div>
 
             <div class="grid-3" style="gap: var(--spacing-md); margin-bottom: var(--spacing-xl);">
                 <a href="yellowfin.html" class="glass-card reveal text-center" style="text-decoration: none;">
                     <div class="ecosystem-number-badge" style="margin: 0 auto 12px auto;">1</div>
-                    <h3 class="text-white" style="margin-bottom: 4px;">Products</h3>
-                    <p style="font-size: 0.9rem; color: var(--color-accent);">Premium tuna & seafood</p>
+                    <h3 style="margin-bottom: 4px;">Products</h3>
+                    <p style="font-size: 0.9rem; color: var(--color-accent); font-weight: 600;">Premium tuna & seafood</p>
                 </a>
 
                 <a href="processing.html" class="glass-card reveal text-center" style="text-decoration: none;">
                     <div class="ecosystem-number-badge" style="margin: 0 auto 12px auto;">2</div>
-                    <h3 class="text-white" style="margin-bottom: 4px;">Processing</h3>
-                    <p style="font-size: 0.9rem; color: var(--color-accent);">State-of-the-art facilities</p>
+                    <h3 style="margin-bottom: 4px;">Processing</h3>
+                    <p style="font-size: 0.9rem; color: var(--color-accent); font-weight: 600;">State-of-the-art facilities</p>
                 </a>
 
                 <a href="processing.html" class="glass-card reveal text-center" style="text-decoration: none;">
                     <div class="ecosystem-number-badge" style="margin: 0 auto 12px auto;">3</div>
-                    <h3 class="text-white" style="margin-bottom: 4px;">Cold Chain</h3>
-                    <p style="font-size: 0.9rem; color: var(--color-accent);">Unbroken preservation</p>
+                    <h3 style="margin-bottom: 4px;">Cold Chain</h3>
+                    <p style="font-size: 0.9rem; color: var(--color-accent); font-weight: 600;">Unbroken preservation</p>
                 </a>
 
                 <a href="wish-harbour.html" class="glass-card reveal text-center" style="text-decoration: none;">
                     <div class="ecosystem-number-badge" style="margin: 0 auto 12px auto;">4</div>
-                    <h3 class="text-white" style="margin-bottom: 4px;">Wish Harbour</h3>
-                    <p style="font-size: 0.9rem; color: var(--color-accent);">Three strategic islands</p>
+                    <h3 style="margin-bottom: 4px;">Wish Harbour</h3>
+                    <p style="font-size: 0.9rem; color: var(--color-accent); font-weight: 600;">Three strategic islands</p>
                 </a>
 
                 <a href="wish-harbour.html#kandholhudhoo" class="glass-card reveal text-center" style="text-decoration: none; grid-column: span 2;">
                     <div class="ecosystem-number-badge" style="margin: 0 auto 12px auto;">5</div>
-                    <h3 class="text-white" style="margin-bottom: 4px;">Tourism</h3>
-                    <p style="font-size: 0.9rem; color: var(--color-accent);">Eco-luxury experiences</p>
+                    <h3 style="margin-bottom: 4px;">Tourism</h3>
+                    <p style="font-size: 0.9rem; color: var(--color-accent); font-weight: 600;">Eco-luxury resort experiences</p>
                 </a>
             </div>
 
             <!-- Assets & Platforms -->
             <div class="text-center reveal" style="max-width: 650px; margin: 0 auto var(--spacing-lg) auto;">
                 <span class="section-subtitle">Assets & Platforms</span>
-                <h3 class="text-white">Assets & Platforms</h3>
+                <h3>Integrated Asset Infrastructure</h3>
             </div>
 
             <div class="grid-3" style="gap: var(--spacing-sm); margin-bottom: var(--spacing-xl);">
                 <div class="glass-card text-center">
-                    <h4 class="text-white">Wish Coralia</h4>
-                    <p style="font-size: 0.85rem; margin-bottom: 8px;">Processing plant</p>
+                    <h4 style="color: var(--color-logo-navy);">Wish Coralia</h4>
+                    <p style="font-size: 0.85rem; margin-bottom: 8px;">Himmafushi Tuna Processing Plant</p>
                     <a href="processing.html" class="btn-text" style="font-size: 0.8rem;">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
 
                 <div class="glass-card text-center">
-                    <h4 class="text-white">Wish Frostline</h4>
-                    <p style="font-size: 0.85rem; margin-bottom: 8px;">Cold storage</p>
+                    <h4 style="color: var(--color-logo-navy);">Wish Frostline</h4>
+                    <p style="font-size: 0.85rem; margin-bottom: 8px;">Multi-Island Cold Storage Network</p>
                     <a href="processing.html" class="btn-text" style="font-size: 0.8rem;">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
 
                 <div class="glass-card text-center">
-                    <h4 class="text-white">GLACIALA™</h4>
-                    <p style="font-size: 0.85rem; margin-bottom: 8px;">Ice systems</p>
+                    <h4 style="color: var(--color-logo-navy);">GLACIALA™</h4>
+                    <p style="font-size: 0.85rem; margin-bottom: 8px;">Industrial Tube & Flake Ice Systems</p>
                     <a href="processing.html" class="btn-text" style="font-size: 0.8rem;">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
 
                 <div class="glass-card text-center">
-                    <h4 class="text-white">Wish Harbour Islands</h4>
+                    <h4 style="color: var(--color-logo-navy);">Wish Harbour Islands</h4>
                     <p style="font-size: 0.85rem; margin-bottom: 8px;">Himmafushi, Kandholhudhoo, Kanandhoo</p>
                     <a href="wish-harbour.html" class="btn-text" style="font-size: 0.8rem;">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
 
                 <div class="glass-card text-center">
-                    <h4 class="text-white">AZUREÍN™ Villas</h4>
-                    <p style="font-size: 0.85rem; margin-bottom: 8px;">Eco-luxury villas</p>
+                    <h4 style="color: var(--color-logo-navy);">AZUREÍN™ Villas</h4>
+                    <p style="font-size: 0.85rem; margin-bottom: 8px;">30 Eco-Luxury Marine Villas</p>
                     <a href="wish-harbour.html#kandholhudhoo" class="btn-text" style="font-size: 0.8rem;">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
 
                 <div class="glass-card text-center">
-                    <h4 class="text-white">PELAGORA™ Villas</h4>
-                    <p style="font-size: 0.85rem; margin-bottom: 8px;">Sustainable luxury</p>
+                    <h4 style="color: var(--color-logo-navy);">PELAGORA™ Villas</h4>
+                    <p style="font-size: 0.85rem; margin-bottom: 8px;">50 Oceanfront Sustainable Villas</p>
                     <a href="wish-harbour.html#kanandhoo" class="btn-text" style="font-size: 0.8rem;">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
 
                 <div class="glass-card text-center" style="grid-column: 1 / -1;">
-                    <h4 class="text-white">Catch of Wish</h4>
-                    <p style="font-size: 0.85rem; margin-bottom: 8px;">Premium restaurant</p>
+                    <h4 style="color: var(--color-logo-navy);">Catch of Wish</h4>
+                    <p style="font-size: 0.85rem; margin-bottom: 8px;">Signature Ocean-to-Table Gastronomy & Restaurant</p>
                     <a href="wish-harbour.html" class="btn-text" style="font-size: 0.8rem;">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
@@ -303,101 +305,102 @@
             <!-- Compliance & Trust -->
             <div class="glass-card reveal text-center" style="padding: var(--spacing-lg); max-width: 900px; margin: 0 auto;">
                 <span class="section-subtitle">Compliance & Trust</span>
-                <h3 class="text-white" style="margin-bottom: var(--spacing-md);">Certified Standards</h3>
-                <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-                    <span class="hero-pill">HACCP Certified</span>
-                    <span class="hero-pill">ISO 22000 Food Safety</span>
-                    <span class="hero-pill">EU Export Standards</span>
-                    <span class="hero-pill">MFDA Audits</span>
-                    <span class="hero-pill">Full Catch Traceability</span>
-                    <span class="hero-pill">MSC Responsible Fishing</span>
+                <h3 style="margin-bottom: var(--spacing-md);">Certified Standards</h3>
+                <div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
+                    <span class="hero-pill" style="color: var(--color-logo-navy);"><i class="fas fa-certificate text-brand" style="margin-right:5px;"></i> HACCP Certified</span>
+                    <span class="hero-pill" style="color: var(--color-logo-navy);"><i class="fas fa-shield-alt text-brand" style="margin-right:5px;"></i> ISO 22000 Food Safety</span>
+                    <span class="hero-pill" style="color: var(--color-logo-navy);"><i class="fas fa-globe text-brand" style="margin-right:5px;"></i> EU Export Standards</span>
+                    <span class="hero-pill" style="color: var(--color-logo-navy);"><i class="fas fa-clipboard-check text-brand" style="margin-right:5px;"></i> MFDA Audited</span>
+                    <span class="hero-pill" style="color: var(--color-logo-navy);"><i class="fas fa-barcode text-brand" style="margin-right:5px;"></i> Full Catch Traceability</span>
+                    <span class="hero-pill" style="color: var(--color-logo-navy);"><i class="fas fa-leaf text-brand" style="margin-right:5px;"></i> MSC Responsible Fishing</span>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Investment Pathways -->
-    <section class="section-padding" style="background-color: var(--color-primary);">
+    <section class="section-padding bg-light">
         <div class="container">
             <div class="text-center reveal" style="max-width: 650px; margin: 0 auto var(--spacing-xl) auto;">
                 <span class="section-subtitle">Investment Pathways</span>
-                <h2 class="text-white">Strategic Opportunities</h2>
+                <h2>Strategic Opportunities</h2>
+                <p>Tailored partnership structures for institutional and strategic investors.</p>
             </div>
 
             <div class="grid-2" style="gap: var(--spacing-md);">
                 <div class="glass-card reveal">
-                    <h3 class="text-gold" style="margin-bottom: 6px;">Strategic Partnerships</h3>
-                    <p style="margin-bottom: var(--spacing-md); font-size: 0.95rem;">Long-term partnerships for growth and market expansion.</p>
-                    <a href="contact.html?type=investor" class="btn btn-outline">Inquire</a>
+                    <h3 class="text-brand" style="margin-bottom: 6px;"><i class="fas fa-handshake" style="margin-right:8px;"></i> Strategic Partnerships</h3>
+                    <p style="margin-bottom: var(--spacing-md); font-size: 0.95rem;">Long-term partnerships for global distribution growth and market expansion.</p>
+                    <a href="#investor-form" class="btn btn-outline">Inquire <i class="fas fa-arrow-right" style="margin-left: 6px;"></i></a>
                 </div>
 
                 <div class="glass-card reveal">
-                    <h3 class="text-gold" style="margin-bottom: 6px;">Private Label & Distribution</h3>
-                    <p style="margin-bottom: var(--spacing-md); font-size: 0.95rem;">Private labeling opportunities for global distributors.</p>
-                    <a href="contact.html?type=investor" class="btn btn-outline">Inquire</a>
+                    <h3 class="text-brand" style="margin-bottom: 6px;"><i class="fas fa-tags" style="margin-right:8px;"></i> Private Label & Distribution</h3>
+                    <p style="margin-bottom: var(--spacing-md); font-size: 0.95rem;">Private labeling and off-take agreements for premier global supermarket chains.</p>
+                    <a href="#investor-form" class="btn btn-outline">Inquire <i class="fas fa-arrow-right" style="margin-left: 6px;"></i></a>
                 </div>
 
                 <div class="glass-card reveal">
-                    <h3 class="text-gold" style="margin-bottom: 6px;">Infrastructure Participation</h3>
-                    <p style="margin-bottom: var(--spacing-md); font-size: 0.95rem;">Investment in processing, cold storage, and logistics infrastructure.</p>
-                    <a href="contact.html?type=investor" class="btn btn-outline">Inquire</a>
+                    <h3 class="text-brand" style="margin-bottom: 6px;"><i class="fas fa-industry" style="margin-right:8px;"></i> Infrastructure Participation</h3>
+                    <p style="margin-bottom: var(--spacing-md); font-size: 0.95rem;">Co-investment in multi-island processing, cold storage, and logistics facilities.</p>
+                    <a href="#investor-form" class="btn btn-outline">Inquire <i class="fas fa-arrow-right" style="margin-left: 6px;"></i></a>
                 </div>
 
                 <div class="glass-card reveal">
-                    <h3 class="text-gold" style="margin-bottom: 6px;">Tourism & Lifestyle Projects</h3>
-                    <p style="margin-bottom: var(--spacing-md); font-size: 0.95rem;">Investment in eco-tourism and luxury hospitality ventures.</p>
-                    <a href="contact.html?type=investor" class="btn btn-outline">Inquire</a>
+                    <h3 class="text-brand" style="margin-bottom: 6px;"><i class="fas fa-umbrella-beach" style="margin-right:8px;"></i> Tourism & Hospitality</h3>
+                    <p style="margin-bottom: var(--spacing-md); font-size: 0.95rem;">Investment in eco-luxury island villas and conservation tourism developments.</p>
+                    <a href="#investor-form" class="btn btn-outline">Inquire <i class="fas fa-arrow-right" style="margin-left: 6px;"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Investor FAQ -->
-    <section class="section-padding" style="background-color: var(--color-secondary);">
+    <section class="section-padding bg-subtle">
         <div class="container" style="max-width: 850px;">
             <div class="text-center reveal" style="margin-bottom: var(--spacing-xl);">
                 <span class="section-subtitle">FAQ</span>
-                <h2 class="text-white">Frequently Asked Questions</h2>
+                <h2>Frequently Asked Questions</h2>
             </div>
 
             <div class="reveal">
                 <div class="faq-item" onclick="toggleFaq(this)">
                     <div class="faq-question">
-                        <span>What makes Wish Holdings a good investment opportunity?</span>
+                        <span>What makes Wish Holdings a high-value investment opportunity?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        Wish Holdings integrates high-demand sustainable tuna harvesting with company-owned island infrastructure and eco-tourism revenue diversification.
+                        Wish Holdings integrates high-demand sustainable tuna harvesting with company-owned island infrastructure, cryogenic cold chain networks, and eco-tourism revenue diversification in one of the world's most pristine marine ecosystems.
                     </div>
                 </div>
 
                 <div class="faq-item" onclick="toggleFaq(this)">
                     <div class="faq-question">
-                        <span>What are the main revenue streams?</span>
+                        <span>What are the company's primary revenue streams?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        Primary revenue streams include raw tuna export sales, value-added products (canned, sausages, pastes), cold storage logistics services, and eco-luxury villa tourism.
+                        Primary revenue streams include raw tuna export sales (Yellowfin & Skipjack), value-added retail consumer lines (AQUATUNA™, AZURISH™), cold storage logistics services, and eco-luxury villa hospitality.
                     </div>
                 </div>
 
                 <div class="faq-item" onclick="toggleFaq(this)">
                     <div class="faq-question">
-                        <span>What certifications and standards does Wish Holdings maintain?</span>
+                        <span>What certifications and regulatory standards are maintained?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        HACCP, ISO 22000, EU Export Approval, FDA Registration, and MSC Chain of Custody compliance.
+                        HACCP, ISO 22000, EU Export Approval, US FDA Registration, and MSC Chain of Custody compliance.
                     </div>
                 </div>
 
                 <div class="faq-item" onclick="toggleFaq(this)">
                     <div class="faq-question">
-                        <span>What is the investment timeline and process?</span>
+                        <span>What is the investment engagement and diligence process?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        Interested investors submit an inquiry form or schedule an initial consultation, followed by execution of an NDA, data room access, due diligence, and tailored partnership agreement structuring.
+                        Prospective investors submit an inquiry form or schedule an initial consultation, followed by execution of an NDA, virtual data room access, due diligence reviews, and tailored term sheet structuring.
                     </div>
                 </div>
             </div>
@@ -405,16 +408,16 @@
     </section>
 
     <!-- Investor Interest Form -->
-    <section class="section-padding" style="background-color: var(--color-primary);">
+    <section class="section-padding bg-light" id="investor-form">
         <div class="container" style="max-width: 800px;">
             <div class="glass-card reveal" style="padding: var(--spacing-xl);">
                 <div class="text-center" style="margin-bottom: var(--spacing-lg);">
                     <span class="section-subtitle">Opportunities</span>
-                    <h2 class="text-white" style="margin-bottom: 6px;">Investor Interest Form</h2>
-                    <p style="font-size: 0.95rem;">Designed for global markets — Asia, Europe, Middle East, Americas.</p>
+                    <h2 style="margin-bottom: 6px;">Investor Interest Form</h2>
+                    <p style="font-size: 0.95rem;">Designed for global investors — Asia, Europe, Middle East, and the Americas.</p>
                 </div>
 
-                <form onsubmit="event.preventDefault(); alert('Thank you for submitting your investor interest form. Our corporate development team will contact you shortly.');">
+                <form onsubmit="event.preventDefault(); alert('Thank you for submitting your investor interest. Our corporate development team will contact you within 24 hours.');">
                     <div class="grid-2" style="gap: var(--spacing-md);">
                         <div class="form-group">
                             <label class="form-label">Full Name *</label>
@@ -422,14 +425,14 @@
                         </div>
 
                         <div class="form-group">
-                            <label class="form-label">Email *</label>
+                            <label class="form-label">Email Address *</label>
                             <input type="email" class="form-control" required placeholder="corporate@domain.com">
                         </div>
                     </div>
 
                     <div class="grid-2" style="gap: var(--spacing-md);">
                         <div class="form-group">
-                            <label class="form-label">Phone</label>
+                            <label class="form-label">Phone / WhatsApp</label>
                             <input type="tel" class="form-control" placeholder="+1 (555) 000-0000">
                         </div>
 
@@ -437,11 +440,11 @@
                             <label class="form-label">Investor Type *</label>
                             <select class="form-control" required style="background: var(--color-secondary);">
                                 <option value="">Select investor type</option>
-                                <option value="Angel Investor">Angel Investor</option>
-                                <option value="VC">VC</option>
-                                <option value="Strategic Investor">Strategic Investor</option>
+                                <option value="Institutional Investor">Institutional Investor</option>
                                 <option value="Family Office">Family Office</option>
-                                <option value="Institutional">Institutional</option>
+                                <option value="Strategic Corporate Partner">Strategic Corporate Partner</option>
+                                <option value="Private Equity / VC">Private Equity / VC</option>
+                                <option value="High Net Worth Individual">High Net Worth Individual</option>
                                 <option value="Other">Other</option>
                             </select>
                         </div>
@@ -449,67 +452,66 @@
 
                     <div class="grid-2" style="gap: var(--spacing-md);">
                         <div class="form-group">
-                            <label class="form-label">Interest Area *</label>
+                            <label class="form-label">Primary Interest Area *</label>
                             <select class="form-control" required style="background: var(--color-secondary);">
                                 <option value="">Select interest area</option>
-                                <option value="Processing & Infrastructure">Processing & Infrastructure</option>
-                                <option value="Products & Brands">Products & Brands</option>
-                                <option value="Tourism & Hospitality">Tourism & Hospitality</option>
-                                <option value="Cold Chain & Logistics">Cold Chain & Logistics</option>
-                                <option value="Full Ecosystem">Full Ecosystem</option>
+                                <option value="Processing & Cold Chain Infrastructure">Processing & Cold Chain Infrastructure</option>
+                                <option value="Value-Added Brands (AQUATUNA, AZURISH)">Value-Added Brands (AQUATUNA, AZURISH)</option>
+                                <option value="Eco-Luxury Hospitality & Villas">Eco-Luxury Hospitality & Villas</option>
+                                <option value="Full Integrated Oceanic Ecosystem">Full Integrated Oceanic Ecosystem</option>
                                 <option value="Other">Other</option>
                             </select>
                         </div>
 
                         <div class="form-group">
-                            <label class="form-label">Investment Amount Range</label>
+                            <label class="form-label">Target Investment Allocation</label>
                             <select class="form-control" style="background: var(--color-secondary);">
-                                <option value="">Select amount range</option>
-                                <option value="Under $100K">Under $100K</option>
-                                <option value="$100K - $500K">$100K - $500K</option>
+                                <option value="">Select target allocation</option>
+                                <option value="$250K - $500K">$250K - $500K</option>
                                 <option value="$500K - $1M">$500K - $1M</option>
                                 <option value="$1M - $5M">$1M - $5M</option>
-                                <option value="$5M+">$5M+</option>
+                                <option value="$5M - $20M">$5M - $20M</option>
+                                <option value="$20M+">$20M+</option>
                             </select>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label class="form-label">Message</label>
-                        <textarea class="form-control" rows="4" placeholder="Briefly describe your investment objectives or questions..."></textarea>
+                        <label class="form-label">Investment Objectives & Notes</label>
+                        <textarea class="form-control" rows="4" placeholder="Briefly outline your strategic investment goals or questions..."></textarea>
                     </div>
 
-                    <button type="submit" class="btn btn-primary" style="width: 100%;"><i class="fas fa-paper-plane" style="margin-right: 8px;"></i> Submit Interest</button>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;"><i class="fas fa-paper-plane" style="margin-right: 8px;"></i> Submit Investor Inquiry</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Next Steps -->
-    <section class="section-padding" style="background-color: var(--color-secondary); border-top: 1px solid rgba(255,255,255,0.05);">
+    <!-- Next Steps Section -->
+    <section class="section-padding bg-subtle">
         <div class="container">
             <div class="text-center reveal" style="margin-bottom: var(--spacing-lg);">
-                <span class="section-subtitle">Continue Your Journey</span>
-                <h2 class="text-white">Next Steps</h2>
+                <span class="section-subtitle">Explore More</span>
+                <h2>Continue Your Journey</h2>
             </div>
 
             <div class="grid-3">
                 <a href="yellowfin.html" class="glass-card reveal text-center" style="transition-delay: 0.1s; text-decoration: none;">
-                    <span class="text-gold" style="font-size: 0.8rem; text-transform: uppercase;">Explore</span>
-                    <h3 class="text-white" style="margin: 4px 0 8px 0;">View Our Products</h3>
-                    <p style="font-size: 0.9rem;">Discover our premium seafood range.</p>
+                    <span class="section-subtitle" style="font-size: 0.75rem;">Commercial Catch</span>
+                    <h3 style="margin: 4px 0 8px 0; font-size: 1.3rem;">View Our Products</h3>
+                    <p style="font-size: 0.9rem;">Discover our premium sashimi-grade seafood range.</p>
                 </a>
 
                 <a href="processing.html" class="glass-card reveal text-center" style="transition-delay: 0.2s; text-decoration: none;">
-                    <span class="text-gold" style="font-size: 0.8rem; text-transform: uppercase;">Learn</span>
-                    <h3 class="text-white" style="margin: 4px 0 8px 0;">See Processing</h3>
-                    <p style="font-size: 0.9rem;">Understand our capabilities at Himmafushi.</p>
+                    <span class="section-subtitle" style="font-size: 0.75rem;">Industrial Capacity</span>
+                    <h3 style="margin: 4px 0 8px 0; font-size: 1.3rem;">See Processing</h3>
+                    <p style="font-size: 0.9rem;">Explore our cold chain & QA capabilities at Himmafushi.</p>
                 </a>
 
                 <a href="contact.html" class="glass-card reveal text-center" style="transition-delay: 0.3s; text-decoration: none;">
-                    <span class="text-gold" style="font-size: 0.8rem; text-transform: uppercase;">Connect</span>
-                    <h3 class="text-white" style="margin: 4px 0 8px 0;">Contact Us</h3>
-                    <p style="font-size: 0.9rem;">Get in touch with our team.</p>
+                    <span class="section-subtitle" style="font-size: 0.75rem;">Direct Contact</span>
+                    <h3 style="margin: 4px 0 8px 0; font-size: 1.3rem;">Contact Corporate Desk</h3>
+                    <p style="font-size: 0.9rem;">Connect with our executive management team.</p>
                 </a>
             </div>
         </div>
