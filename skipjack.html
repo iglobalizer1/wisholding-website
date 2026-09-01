@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skipjack Tuna | Wish Holdings Products</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Fonts / Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .prod-hero-skipjack {
+            padding-top: 150px;
+            padding-bottom: var(--spacing-xl);
+            background: linear-gradient(180deg, rgba(10, 17, 40, 0.95) 0%, rgba(28, 37, 65, 0.9) 100%), url('https://images.unsplash.com/photo-1534483509719-3feaee7c30da?auto=format&fit=crop&q=80&w=1920');
+            background-size: cover;
+            background-position: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .promise-box {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: var(--border-radius-lg);
+            padding: var(--spacing-xl);
+            margin: var(--spacing-xl) 0;
+            text-align: center;
+            position: relative;
+        }
+        .promise-item {
+            text-align: left;
+            padding: var(--spacing-md);
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: var(--border-radius-md);
+        }
+        /* Accordion */
+        .faq-item {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: var(--border-radius-md);
+            margin-bottom: var(--spacing-xs);
+            overflow: hidden;
+        }
+        .faq-question {
+            padding: var(--spacing-md);
+            font-weight: 600;
+            color: var(--color-text-heading);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-answer {
+            padding: 0 var(--spacing-md) var(--spacing-md) var(--spacing-md);
+            color: var(--color-text-body);
+            font-size: 0.95rem;
+            display: none;
+            line-height: 1.6;
+        }
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        .faq-item.active .faq-question {
+            color: var(--color-accent);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Product Hero -->
+    <section class="prod-hero-skipjack">
+        <div class="container text-center">
+            <span class="section-subtitle">Traditional Pole-and-Line Harvest</span>
+            <h1 class="text-white" style="margin-bottom: 8px;">Skipjack Tuna</h1>
+            <p style="max-width: 650px; margin: 0 auto var(--spacing-lg) auto; font-size: 1.2rem; color: var(--color-text-body); font-weight: 500;">
+                The Heart of the Maldivian Fishery — pole-and-line caught with full traceability.
+            </p>
+            <div style="display: flex; justify-content: center; gap: var(--spacing-sm); flex-wrap: wrap;">
+                <a href="contact.html?type=buyer#sales" class="btn btn-primary"><i class="fas fa-headset" style="margin-right: 8px;"></i> Talk to Sales</a>
+                <a href="contact.html?type=partner" class="btn btn-outline"><i class="fas fa-handshake" style="margin-right: 8px;"></i> Become a Distributor</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Overview -->
+    <section class="section-padding" style="background-color: var(--color-primary);">
+        <div class="container">
+            <div class="grid-2" style="align-items: center; gap: var(--spacing-xl);">
+                <div class="reveal hover-zoom-container" style="border-radius: var(--border-radius-lg); max-height: 420px;">
+                    <img src="https://images.unsplash.com/photo-1534483509719-3feaee7c30da?auto=format&fit=crop&q=80&w=800" alt="Skipjack Tuna Katsuwonus pelamis">
+                </div>
+                <div class="reveal">
+                    <span class="section-subtitle">Product Overview</span>
+                    <h2 class="text-white" style="margin-bottom: 4px;">Skipjack Tuna</h2>
+                    <p class="text-gold" style="font-size: 1.1rem; font-style: italic; font-weight: 600; margin-bottom: var(--spacing-md);">Katsuwonus pelamis</p>
+                    <p style="margin-bottom: var(--spacing-sm); font-size: 1.05rem; line-height: 1.7; color: var(--color-text-heading);">
+                        Skipjack Tuna is the lifeblood of Maldivian fishing culture — fast, flavorful, and caught by traditional pole-and-line methods, ensuring zero harm to marine ecosystems.
+                    </p>
+                    <p style="margin-bottom: var(--spacing-md); line-height: 1.7;">
+                        Hand-sorted and cleaned at Wish Harbour Himmafushi, prepared for frozen export with full traceability from catch to packaging.
+                    </p>
+
+                    <div style="display: flex; flex-direction: column; gap: 12px;">
+                        <div style="display: flex; gap: 10px; align-items: flex-start;">
+                            <i class="fas fa-check-circle text-gold" style="margin-top: 4px;"></i>
+                            <div><strong>Pole-and-line heritage</strong> — Traditional Maldivian fishing methods</div>
+                        </div>
+                        <div style="display: flex; gap: 10px; align-items: flex-start;">
+                            <i class="fas fa-check-circle text-gold" style="margin-top: 4px;"></i>
+                            <div><strong>Quick handling</strong> — Processed rapidly to preserve freshness</div>
+                        </div>
+                        <div style="display: flex; gap: 10px; align-items: flex-start;">
+                            <i class="fas fa-check-circle text-gold" style="margin-top: 4px;"></i>
+                            <div><strong>Full traceability</strong> — From catch to packaging, every step tracked</div>
+                        </div>
+                        <div style="display: flex; gap: 10px; align-items: flex-start;">
+                            <i class="fas fa-check-circle text-gold" style="margin-top: 4px;"></i>
+                            <div><strong>Export-ready</strong> — Designed to meet export-grade requirements</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Product Showcase -->
+    <section class="section-padding" style="background-color: var(--color-secondary);">
+        <div class="container">
+            <div class="glass-card reveal text-center" style="padding: var(--spacing-xl); max-width: 900px; margin: 0 auto;">
+                <span class="section-subtitle">Our Product</span>
+                <h2 class="text-white" style="margin-bottom: var(--spacing-sm);">Frozen Skipjack Tuna</h2>
+                <p style="font-size: 1.15rem; color: var(--color-text-heading); max-width: 700px; margin: 0 auto var(--spacing-md) auto;">
+                    Premium frozen Skipjack Tuna processed to export-grade specifications with full traceability.
+                </p>
+                <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                    <span class="hero-pill"><i class="fas fa-snowflake" style="margin-right: 6px;"></i> Whole Round Frozen</span>
+                    <span class="hero-pill"><i class="fas fa-box" style="margin-right: 6px;"></i> Master Carton Packing</span>
+                    <span class="hero-pill"><i class="fas fa-ship" style="margin-right: 6px;"></i> Containerized Reefer Export</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Process -->
+    <section class="section-padding" style="background-color: var(--color-primary);">
+        <div class="container">
+            <div class="text-center reveal" style="max-width: 650px; margin: 0 auto var(--spacing-xl) auto;">
+                <span class="section-subtitle">Our Process</span>
+                <h2 class="text-white">How We Process Skipjack</h2>
+            </div>
+
+            <div class="grid-4" style="gap: var(--spacing-md);">
+                <div class="glass-card reveal" style="transition-delay: 0.1s;">
+                    <div style="font-size: 1.8rem; color: var(--color-accent); margin-bottom: 8px;"><i class="fas fa-hand-holding-water"></i></div>
+                    <h4 class="text-white" style="margin-bottom: 6px;">Hand-Sorted</h4>
+                    <p style="font-size: 0.85rem;">Hand-sorted and cleaned at Wish Harbour Himmafushi by experienced Maldivian processing staff.</p>
+                </div>
+
+                <div class="glass-card reveal" style="transition-delay: 0.2s;">
+                    <div style="font-size: 1.8rem; color: var(--color-accent); margin-bottom: 8px;"><i class="fas fa-temperature-low"></i></div>
+                    <h4 class="text-white" style="margin-bottom: 6px;">Export Freeze</h4>
+                    <p style="font-size: 0.85rem;">Prepared for frozen export with export-grade blast freezing and hygiene protocols.</p>
+                </div>
+
+                <div class="glass-card reveal" style="transition-delay: 0.3s;">
+                    <div style="font-size: 1.8rem; color: var(--color-accent); margin-bottom: 8px;"><i class="fas fa-qrcode"></i></div>
+                    <h4 class="text-white" style="margin-bottom: 6px;">Full Traceability</h4>
+                    <p style="font-size: 0.85rem;">Full traceability from vessel catch log to final export packaging badge.</p>
+                </div>
+
+                <div class="glass-card reveal" style="transition-delay: 0.4s;">
+                    <div style="font-size: 1.8rem; color: var(--color-accent); margin-bottom: 8px;"><i class="fas fa-anchor"></i></div>
+                    <h4 class="text-white" style="margin-bottom: 6px;">Pole-and-Line</h4>
+                    <p style="font-size: 0.85rem;">Maintains the authentic Maldivian pole-and-line heritage and sustainable marine balance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sustainability & Quality Assurance -->
+    <section class="section-padding" style="background-color: var(--color-secondary);">
+        <div class="container">
+            <div class="text-center reveal" style="max-width: 750px; margin: 0 auto var(--spacing-xl) auto;">
+                <span class="section-subtitle">Sustainability & Quality Assurance</span>
+                <h2 class="text-white" style="margin-bottom: var(--spacing-sm);">Certified Marine Excellence</h2>
+                <p style="font-size: 1.1rem; color: rgba(255,255,255,0.9); line-height: 1.7;">
+                    Our operations combine sustainability leadership with industrial reliability — a critical advantage in modern seafood trade.
+                </p>
+            </div>
+
+            <div class="grid-2" style="gap: var(--spacing-md); margin-bottom: var(--spacing-xl);">
+                <div class="trust-card reveal" style="transition-delay: 0.1s;">
+                    <h4 class="text-white" style="margin-bottom: 6px;"><i class="fas fa-award text-gold" style="margin-right: 8px;"></i> MSC-Certified Fishery</h4>
+                    <p>Maldives tuna fishery certified since 2014, adhering strictly to global eco-labeling marine standards.</p>
+                </div>
+
+                <div class="trust-card reveal" style="transition-delay: 0.2s;">
+                    <h4 class="text-white" style="margin-bottom: 6px;"><i class="fas fa-globe text-gold" style="margin-right: 8px;"></i> Full Regulatory Compliance</h4>
+                    <p>Full compliance with European Union (EU), US FDA, and Asian import health regulations.</p>
+                </div>
+
+                <div class="trust-card reveal" style="transition-delay: 0.3s;">
+                    <h4 class="text-white" style="margin-bottom: 6px;"><i class="fas fa-shield-alt text-gold" style="margin-right: 8px;"></i> HACCP-Aligned Food Safety</h4>
+                    <p>Comprehensive quality control systems with continuous digital temperature monitoring.</p>
+                </div>
+
+                <div class="trust-card reveal" style="transition-delay: 0.4s;">
+                    <h4 class="text-white" style="margin-bottom: 6px;"><i class="fas fa-boxes text-gold" style="margin-right: 8px;"></i> Export-Grade Handling</h4>
+                    <p>Export-grade handling, blast freezing, custom packaging, and complete compliance documentation.</p>
+                </div>
+            </div>
+
+            <!-- Export Markets -->
+            <div class="glass-card reveal text-center" style="max-width: 800px; margin: 0 auto; padding: var(--spacing-lg);">
+                <span class="section-subtitle">Global Distribution</span>
+                <h3 class="text-white" style="margin-bottom: var(--spacing-sm);">Export Markets</h3>
+                <div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
+                    <span class="hero-pill"><i class="fas fa-sun" style="margin-right:6px;"></i> Japan</span>
+                    <span class="hero-pill"><i class="fas fa-map-marker-alt" style="margin-right:6px;"></i> Thailand</span>
+                    <span class="hero-pill"><i class="fas fa-globe-europe" style="margin-right:6px;"></i> EU</span>
+                    <span class="hero-pill"><i class="fas fa-globe-africa" style="margin-right:6px;"></i> Middle East</span>
+                    <span class="hero-pill"><i class="fas fa-globe-americas" style="margin-right:6px;"></i> USA</span>
+                    <span class="hero-pill"><i class="fas fa-flag" style="margin-right:6px;"></i> Canada</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wish Tuna Promise -->
+    <section class="section-padding" style="background-color: var(--color-primary);">
+        <div class="container">
+            <div class="promise-box reveal">
+                <span class="section-subtitle">Wish Tuna</span>
+                <h2 class="text-white" style="margin-bottom: var(--spacing-md);">The Wish Tuna Promise</h2>
+                <p style="font-size: 1.1rem; max-width: 700px; margin: 0 auto var(--spacing-lg) auto; color: rgba(255,255,255,0.9);">
+                    Each product under the Wish Tuna brand is guided by our unwavering commitment to:
+                </p>
+
+                <div class="grid-2" style="gap: var(--spacing-md); margin-bottom: var(--spacing-lg);">
+                    <div class="promise-item">
+                        <h4 class="text-gold" style="margin-bottom: 4px;"><i class="fas fa-leaf" style="margin-right:6px;"></i> Sustainability</h4>
+                        <p style="font-size: 0.95rem;">100% responsibly sourced tuna, supporting marine life and local fishermen.</p>
+                    </div>
+
+                    <div class="promise-item">
+                        <h4 class="text-gold" style="margin-bottom: 4px;"><i class="fas fa-certificate" style="margin-right:6px;"></i> Quality Assurance</h4>
+                        <p style="font-size: 0.95rem;">Processed in modern plants with international food safety certifications.</p>
+                    </div>
+
+                    <div class="promise-item">
+                        <h4 class="text-gold" style="margin-bottom: 4px;"><i class="fas fa-stream" style="margin-right:6px;"></i> Traceability</h4>
+                        <p style="font-size: 0.95rem;">Full catch-to-can transparency for every customer and trade partner.</p>
+                    </div>
+
+                    <div class="promise-item">
+                        <h4 class="text-gold" style="margin-bottom: 4px;"><i class="fas fa-heart" style="margin-right:6px;"></i> Maldivian Pride</h4>
+                        <p style="font-size: 0.95rem;">Born in the Indian Ocean, shared proudly with the world.</p>
+                    </div>
+                </div>
+
+                <div style="font-family: var(--font-heading); font-size: 1.3rem; color: var(--color-accent); font-weight: 700;">
+                    Wish Tuna — From the Heart of the Ocean. From the Heart of the Maldives.
+                </div>
+            </div>
+
+            <!-- Ready to Order CTA -->
+            <div class="glass-card reveal text-center" style="max-width: 800px; margin: 0 auto; padding: var(--spacing-lg);">
+                <h3 class="text-white" style="margin-bottom: 8px;">Ready to Order Skipjack Tuna?</h3>
+                <p style="margin-bottom: var(--spacing-md);">Connect with our sales team for quotes, specifications, and distributor opportunities.</p>
+                <a href="contact.html?type=partner" class="btn btn-primary"><i class="fas fa-handshake" style="margin-right: 8px;"></i> Become a Distributor</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buyer FAQ Section -->
+    <section class="section-padding" style="background-color: var(--color-secondary);">
+        <div class="container" style="max-width: 850px;">
+            <div class="text-center reveal" style="margin-bottom: var(--spacing-xl);">
+                <span class="section-subtitle">Buyer FAQ</span>
+                <h2 class="text-white">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="reveal">
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>What is the Minimum Order Quantity (MOQ)?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Standard MOQ for frozen Skipjack Tuna sea-freight container orders is 10 metric tons (20ft reefer).
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>What is the typical lead time?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Export orders are processed, frozen, and dispatched within 7–14 days from contract confirmation.
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>Is private labeling available?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Yes, customized master cartons, branded plastic wrap, and custom unit sizing options are available.
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>What certifications do you have?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        HACCP, ISO 22000, FDA Registered, EU Approved plant clearance, and MSC certification.
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>What shipping options are available?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        FOB Malé, CIF destination ports worldwide, with full health certification and maritime export documentation.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Next Steps Section -->
+    <section class="section-padding" style="background-color: var(--color-primary); border-top: 1px solid rgba(255,255,255,0.05);">
+        <div class="container">
+            <div class="text-center reveal" style="margin-bottom: var(--spacing-lg);">
+                <span class="section-subtitle">Next Steps</span>
+                <h2 class="text-white">Continue Exploring</h2>
+            </div>
+
+            <div class="grid-3">
+                <a href="yellowfin.html" class="glass-card reveal text-center" style="transition-delay: 0.1s; text-decoration: none;">
+                    <span class="text-gold" style="font-size: 0.8rem; text-transform: uppercase;">Next</span>
+                    <h3 class="text-white" style="margin: 4px 0 8px 0;">View Yellowfin Tuna</h3>
+                    <p style="font-size: 0.9rem;">Explore our premium line-caught Yellowfin tuna cuts and formats.</p>
+                </a>
+
+                <a href="processing.html" class="glass-card reveal text-center" style="transition-delay: 0.2s; text-decoration: none;">
+                    <span class="text-gold" style="font-size: 0.8rem; text-transform: uppercase;">Explore</span>
+                    <h3 class="text-white" style="margin: 4px 0 8px 0;">See Processing</h3>
+                    <p style="font-size: 0.9rem;">Discover WISH CORALIA plant operations and cold chain standards.</p>
+                </a>
+
+                <a href="contact.html?type=buyer" class="glass-card reveal text-center" style="transition-delay: 0.3s; text-decoration: none;">
+                    <span class="text-gold" style="font-size: 0.8rem; text-transform: uppercase;">Connect</span>
+                    <h3 class="text-white" style="margin: 4px 0 8px 0;">Contact Sales</h3>
+                    <p style="font-size: 0.9rem;">Request export quotes, product sheets, and volume pricing.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- JS Files -->
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        function toggleFaq(element) {
+            element.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers & Hiring | Corporate Jobs - Wish Holdings</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Fonts / Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Benefit cards */
+        .benefit-card {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: var(--border-radius-md);
+            padding: var(--spacing-md);
+            text-align: center;
+            transition: var(--transition-normal);
+        }
+        .benefit-card:hover {
+            border-color: var(--color-accent);
+            background: rgba(255,255,255,0.04);
+            transform: translateY(-3px);
+        }
+        .benefit-icon {
+            font-size: 2rem;
+            color: var(--color-accent);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        /* Careers grid list */
+        .job-list {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-lg);
+        }
+        .job-card {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.04);
+            border-radius: var(--border-radius-md);
+            padding: var(--spacing-md);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: var(--spacing-sm);
+            transition: var(--transition-normal);
+        }
+        .job-card:hover {
+            background: rgba(255,255,255,0.04);
+            border-color: rgba(212,175,55,0.2);
+        }
+        .job-meta {
+            display: flex;
+            gap: 15px;
+            font-size: 0.85rem;
+            color: var(--color-muted);
+            margin-top: 5px;
+        }
+
+        /* Hiring steps */
+        .hiring-steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-lg);
+        }
+        .step-block {
+            text-align: center;
+            position: relative;
+        }
+        .step-bubble {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--color-secondary);
+            border: 2px solid var(--color-accent);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--color-accent);
+            margin-bottom: var(--spacing-sm);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Inner Page Header -->
+    <section class="inner-hero">
+        <div class="inner-hero-bg"></div>
+        <div class="container text-center">
+            <span class="section-subtitle">Join the Team</span>
+            <h1 class="text-white">Corporate Careers</h1>
+            <p style="max-width: 600px; margin: 10px auto 0 auto;">Build a global career in marine operations, food safety engineering, distribution logistics, and environmental sciences.</p>
+        </div>
+    </section>
+
+    <!-- Why Work Here (Benefits) -->
+    <section class="section-padding" style="background-color: var(--color-primary);">
+        <div class="container">
+            <div class="text-center reveal" style="max-width: 600px; margin: 0 auto var(--spacing-xl) auto;">
+                <span class="section-subtitle">Employee Benefits</span>
+                <h2 class="text-white">Why Join Wish Holdings?</h2>
+                <p>We provide a collaborative, tax-free operating environment with extensive growth incentives.</p>
+            </div>
+            
+            <div class="grid-4">
+                <div class="benefit-card reveal" style="transition-delay:0.1s;">
+                    <div class="benefit-icon"><i class="fas fa-hand-holding-dollar"></i></div>
+                    <h4 class="text-white" style="margin-bottom:5px;">Tax-Free Income</h4>
+                    <p style="font-size:0.85rem;">Attractive compensation structure based in the Maldives with zero income tax brackets.</p>
+                </div>
+                
+                <div class="benefit-card reveal" style="transition-delay:0.2s;">
+                    <div class="benefit-icon"><i class="fas fa-user-doctor"></i></div>
+                    <h4 class="text-white" style="margin-bottom:5px;">Premium Medical</h4>
+                    <p style="font-size:0.85rem;">Comprehensive health, dental, and life insurance policies covering employee families.</p>
+                </div>
+
+                <div class="benefit-card reveal" style="transition-delay:0.3s;">
+                    <div class="benefit-icon"><i class="fas fa-plane-up"></i></div>
+                    <h4 class="text-white" style="margin-bottom:5px;">Annual Flight Allowance</h4>
+                    <p style="font-size:0.85rem;">Fully covered annual return air tickets to help you stay connected with family abroad.</p>
+                </div>
+
+                <div class="benefit-card reveal" style="transition-delay:0.4s;">
+                    <div class="benefit-icon"><i class="fas fa-solar-panel"></i></div>
+                    <h4 class="text-white" style="margin-bottom:5px;">Green Mandate</h4>
+                    <p style="font-size:0.85rem;">Work in an organization prioritizing clean solar energy, zero waste, and local ocean conservation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recruitment Process -->
+    <section class="section-padding" style="background-color: var(--color-secondary);">
+        <div class="container">
+            <div class="text-center reveal" style="max-width: 600px; margin: 0 auto var(--spacing-sm) auto;">
+                <span class="section-subtitle">The Journey</span>
+                <h2 class="text-white">Our Hiring Process</h2>
+                <p>Four simple stages designed to identify cultural alignment and professional excellence.</p>
+            </div>
+            
+            <div class="hiring-steps-grid">
+                <div class="step-block reveal" style="transition-delay:0.1s;">
+                    <div class="step-bubble">1</div>
+                    <h4 class="text-white" style="margin-bottom:5px;">Online Submission</h4>
+                    <p style="font-size:0.85rem;">Browse active openings below and submit your cv/profile detailing key project experience.</p>
+                </div>
+                
+                <div class="step-block reveal" style="transition-delay:0.2s;">
+                    <div class="step-bubble">2</div>
+                    <h4 class="text-white" style="margin-bottom:5px;">Initial Video Screening</h4>
+                    <p style="font-size:0.85rem;">30-minute introductory meeting with HR managers to discuss motivations and logistics.</p>
+                </div>
+
+                <div class="step-block reveal" style="transition-delay:0.3s;">
+                    <div class="step-bubble">3</div>
+                    <h4 class="text-white" style="margin-bottom:5px;">Technical Interview</h4>
+                    <p style="font-size:0.85rem;">Case study evaluation or technical session with division managers and QA biochemists.</p>
+                </div>
+
+                <div class="step-block reveal" style="transition-delay:0.4s;">
+                    <div class="step-bubble">4</div>
+                    <h4 class="text-white" style="margin-bottom:5px;">Offer & Relocation</h4>
+                    <p style="font-size:0.85rem;">Mutual agreement on terms followed by full visa coordination and relocations assistance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Active Openings -->
+    <section class="section-padding" style="background-color: var(--color-primary);">
+        <div class="container">
+            <div class="text-center reveal" style="max-width: 600px; margin: 0 auto var(--spacing-sm) auto;">
+                <span class="section-subtitle">Careers Hub</span>
+                <h2 class="text-white">Active Global Openings</h2>
+                <p>Join our corporate units. Listings are updated in real-time by human resource operations.</p>
+            </div>
+            
+            <div class="job-list" id="jobs-listing-container">
+                <!-- Populated dynamically via WishDB -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Apply Job Modal Overlay -->
+    <div class="modal-overlay" id="job-modal-overlay"></div>
+    <div class="modal-content" id="job-modal-content">
+        <span class="modal-close-btn" id="close-job-modal"><i class="fas fa-times"></i></span>
+        <span class="section-subtitle">Job Application Form</span>
+        <h2 class="text-white" style="margin-bottom: var(--spacing-md);" id="apply-job-title">Apply for Opening</h2>
+        
+        <form id="job-application-form">
+            <input type="hidden" id="form-job-title" name="jobTitle">
+            
+            <div class="form-group">
+                <label class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="form-candidate-name" required placeholder="Robert Vance">
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="form-email" required placeholder="r.vance@maritime.com">
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Contact Phone</label>
+                <input type="tel" class="form-control" id="form-phone" required placeholder="+1 206 555 0192">
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Resume / CV (Mock Upload)</label>
+                <input type="file" class="form-control" id="form-resume" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Cover Letter / Note</label>
+                <textarea class="form-control" id="form-coverletter" rows="4" placeholder="Detail your experience in seafood exports, processing, or general maritime logistics..."></textarea>
+            </div>
+            
+            <div style="margin-top:var(--spacing-md);">
+                <button type="submit" class="btn btn-primary" style="width:100%;">Submit Application</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- JS Files -->
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const listContainer = document.getElementById("jobs-listing-container");
+            const overlay = document.getElementById("job-modal-overlay");
+            const modal = document.getElementById("job-modal-content");
+            const closeBtn = document.getElementById("close-job-modal");
+            const appForm = document.getElementById("job-application-form");
+            const targetTitle = document.getElementById("apply-job-title");
+            const hiddenJobTitleInput = document.getElementById("form-job-title");
+
+            function renderJobs() {
+                const jobs = window.WishDB ? window.WishDB.getCareers() : [];
+                if (jobs.length === 0) {
+                    listContainer.innerHTML = `
+                        <div class="glass-card text-center" style="padding:var(--spacing-lg);">
+                            <h3 class="text-white">No Active Openings</h3>
+                            <p>We are not hiring at the moment. Please check back later or submit an inquiry to HR.</p>
+                        </div>
+                    `;
+                    return;
+                }
+
+                 listContainer.innerHTML = jobs.map(job => `
+                    <div class="job-card reveal">
+                        <div>
+                            <h3 class="text-white" style="font-size:1.25rem;">${job.title}</h3>
+                            <div class="job-meta">
+                                <span><i class="fas fa-building text-gold"></i> ${job.department}</span>
+                                <span><i class="fas fa-map-marker-alt text-gold"></i> ${job.location}</span>
+                                <span><i class="fas fa-clock text-gold"></i> ${job.type}</span>
+                            </div>
+                            <p style="font-size:0.9rem; line-height:1.5; margin-top:10px; max-width:850px;">
+                                ${job.description}
+                            </p>
+                            <div style="margin-top: 10px;">
+                                <strong style="font-size:0.85rem; color:#FFF;">Key Requirements:</strong>
+                                <ul style="list-style:disc; padding-left:20px; font-size:0.85rem; margin-top:5px; color:var(--color-muted);">
+                                    ${job.requirements.map(req => `<li>${req}</li>`).join('')}
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary" onclick="openApplyModal('${job.title}')">Apply Now</button>
+                        </div>
+                    </div>
+                `).join('');
+
+                // Re-trigger scroll reveal
+                if (typeof window.initScrollReveal === "function") {
+                    window.initScrollReveal();
+                }
+            }
+
+            window.openApplyModal = function(title) {
+                targetTitle.innerText = "Apply for: " + title;
+                hiddenJobTitleInput.value = title;
+                overlay.classList.add("active");
+                modal.classList.add("active");
+            };
+
+            function closeModal() {
+                overlay.classList.remove("active");
+                modal.classList.remove("active");
+                appForm.reset();
+            }
+
+            if (closeBtn) closeBtn.addEventListener("click", closeModal);
+            if (overlay) overlay.addEventListener("click", closeModal);
+
+            if (appForm) {
+                appForm.addEventListener("submit", (e) => {
+                    e.preventDefault();
+                    
+                    const newApp = {
+                        jobTitle: hiddenJobTitleInput.value,
+                        candidateName: document.getElementById("form-candidate-name").value,
+                        email: document.getElementById("form-email").value,
+                        phone: document.getElementById("form-phone").value,
+                        resumeName: document.getElementById("form-resume").files[0] ? document.getElementById("form-resume").files[0].name : "attached_resume.pdf",
+                        coverLetter: document.getElementById("form-coverletter").value
+                    };
+
+                    if (window.WishDB) {
+                        window.WishDB.addApplication(newApp);
+                        alert(`Thank you, ${newApp.candidateName}!\nYour application for '${newApp.jobTitle}' has been submitted successfully.\nHR will review your resume (${newApp.resumeName}) shortly.`);
+                        closeModal();
+                    } else {
+                        alert("Database connection error. Please try again.");
+                    }
+                });
+            }
+
+            renderJobs();
+        });
+    </script>
+</body>
+</html>

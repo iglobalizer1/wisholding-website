@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B2B Distributor Portal - Wish Holdings</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Fonts / Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Portal specific layout */
+        .portal-wrapper {
+            margin-top: var(--spacing-lg);
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--spacing-lg);
+        }
+
+        /* Sidebar Nav for Portal */
+        .portal-nav {
+            display: flex;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: var(--border-radius-md);
+            padding: var(--spacing-xs);
+            gap: 5px;
+            overflow-x: auto;
+        }
+        .portal-nav-btn {
+            padding: 0.8rem 1.5rem;
+            border-radius: var(--border-radius-sm);
+            font-family: var(--font-heading);
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: var(--transition-fast);
+            color: var(--color-muted);
+        }
+        .portal-nav-btn.active {
+            background: var(--color-accent);
+            color: var(--color-primary);
+        }
+
+        /* Auth form layout */
+        .auth-box {
+            max-width: 450px;
+            margin: var(--spacing-xl) auto;
+        }
+
+        /* Info grids */
+        .portal-grid-3 {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-md);
+        }
+        @media (min-width: 768px) {
+            .portal-grid-3 {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        .status-badge {
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+        .status-pending { background: rgba(212,175,55,0.15); color: var(--color-accent); }
+        .status-approved { background: rgba(56,161,105,0.15); color: var(--color-success); }
+    </style>
+</head>
+<body>
+
+    <!-- Inner Page Header -->
+    <section class="inner-hero">
+        <div class="inner-hero-bg"></div>
+        <div class="container text-center">
+            <span class="section-subtitle">Wholesale Hub</span>
+            <h1 class="text-white" id="portal-header-title">B2B Portal Login</h1>
+            <p style="max-width: 600px; margin: 10px auto 0 auto;">Registered buyers can access global wholesale prices, place bulk shipping orders, and monitor custom clearance filings.</p>
+        </div>
+    </section>
+
+    <!-- Portal Section -->
+    <section class="section-padding" style="background-color: var(--color-primary);">
+        <div class="container">
+            
+            <!-- Simulated Auth Interface -->
+            <div id="portal-auth-section" class="reveal">
+                <div class="glass-card auth-box">
+                    <div style="text-align:center; margin-bottom:var(--spacing-md);">
+                        <i class="fas fa-lock text-gold" style="font-size:2.5rem; margin-bottom:10px;"></i>
+                        <h3 class="text-white">Partner Authentication</h3>
+                        <p style="font-size:0.85rem;">Login or Register to access bulk pricing contracts.</p>
+                    </div>
+                    
+                    <form id="portal-login-form">
+                        <div class="form-group">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="auth-email" required value="h.mueller@nordicseafood.de">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Password</label>
+                            <input type="password" class="form-control" id="auth-pass" required value="partner123">
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width:100%; margin-top:10px;">Authenticate Account</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Dashboard Interface (Hidden initially) -->
+            <div id="portal-dashboard-section" style="display:none;">
+                <div class="portal-nav reveal">
+                    <button class="portal-nav-btn active" onclick="switchPortalTab('dashboard')"><i class="fas fa-chart-line"></i> Dashboard</button>
+                    <button class="portal-nav-btn" onclick="switchPortalTab('rfq')"><i class="fas fa-file-invoice-dollar"></i> Create RFQ</button>
+                    <button class="portal-nav-btn" onclick="switchPortalTab('catalog')"><i class="fas fa-table-list"></i> Price Catalog</button>
+                    <button class="portal-nav-btn" onclick="logoutPortal()" style="margin-left:auto;"><i class="fas fa-sign-out-alt"></i> Logout</button>
+                </div>
+
+                <div class="portal-wrapper">
+                    
+                    <!-- Tab 1: Dashboard -->
+                    <div id="tab-dashboard" class="portal-pane active reveal">
+                        <div class="portal-grid-3">
+                            <div class="glass-card">
+                                <h4 class="text-gold" style="font-size:0.85rem; text-transform:uppercase;">Registered Entity</h4>
+                                <h3 class="text-white" style="margin-top:5px;" id="dash-company-name">Nordic Seafood GmbH</h3>
+                                <p style="font-size:0.8rem;">Representative: Hans Müller</p>
+                            </div>
+                            
+                            <div class="glass-card">
+                                <h4 class="text-gold" style="font-size:0.85rem; text-transform:uppercase;">Active Shipments</h4>
+                                <h3 class="text-white" style="margin-top:5px;"><i class="fas fa-ship text-aqua"></i> 1 Containers Transit</h3>
+                                <p style="font-size:0.8rem;">ETA Hamburg: Sept 01</p>
+                            </div>
+
+                            <div class="glass-card">
+                                <h4 class="text-gold" style="font-size:0.85rem; text-transform:uppercase;">B2B Credit Limit</h4>
+                                <h3 class="text-white" style="margin-top:5px;">$150,000 USD</h3>
+                                <p style="font-size:0.8rem;">Clean Payment Terms</p>
+                            </div>
+                        </div>
+
+                        <div class="glass-card" style="margin-top:var(--spacing-md);">
+                            <h3 class="text-white" style="margin-bottom:var(--spacing-md);">Your B2B RFQ Submissions</h3>
+                            <div class="spec-table-container">
+                                <table class="spec-table">
+                                    <thead>
+                                        <tr>
+                                            <th>RFQ ID</th>
+                                            <th>Product Sourced</th>
+                                            <th>Quantity</th>
+                                            <th>Delivery Date</th>
+                                            <th>Submission Date</th>
+                                            <th>Review Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="portal-rfq-list-target">
+                                        <!-- Loaded via JS -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 2: Create RFQ Form -->
+                    <div id="tab-rfq" class="portal-pane" style="display:none;">
+                        <div class="glass-card" style="max-width: 750px; margin: 0 auto;">
+                            <h3 class="text-white" style="margin-bottom:var(--spacing-md);"><i class="fas fa-signature text-gold"></i> Submit Wholesale RFQ Request</h3>
+                            <form id="portal-rfq-form">
+                                <div class="grid-2">
+                                    <div class="form-group">
+                                        <label class="form-label">Product Selection</label>
+                                        <select class="form-control" id="rfq-product" style="background:var(--color-secondary); color:#FFF;"></select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Target Quantity (Metric Tons)</label>
+                                        <input type="text" class="form-control" id="rfq-qty" required placeholder="15 Metric Tons">
+                                    </div>
+                                </div>
+                                
+                                <div class="grid-2">
+                                    <div class="form-group">
+                                        <label class="form-label">Export Country Destination</label>
+                                        <input type="text" class="form-control" id="rfq-country" required placeholder="Germany">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Expected Delivery Date</label>
+                                        <input type="date" class="form-control" id="rfq-date" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Custom Logistics Instructions / Requirements</label>
+                                    <textarea class="form-control" id="rfq-comments" rows="5" placeholder="Detail packaging (e.g. Sashimi-grade -60C super-frozen vacuum loins), payment parameters, shipping options CIF/FOB..."></textarea>
+                                </div>
+                                
+                                <div style="margin-top:var(--spacing-md);">
+                                    <button type="submit" class="btn btn-primary" style="width:100%;">Submit B2B RFQ Request</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Tab 3: Price Catalog -->
+                    <div id="tab-catalog" class="portal-pane" style="display:none;">
+                        <div class="glass-card">
+                            <h3 class="text-white" style="margin-bottom:var(--spacing-md);"><i class="fas fa-tag text-gold"></i> Wholesale B2B Contracts Price Catalog</h3>
+                            <p style="margin-bottom:var(--spacing-md);">FOB Port Malé pricing valid for current month allocations only. Subject to fish stock index availability.</p>
+                            <div class="spec-table-container">
+                                <table class="spec-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Product Name</th>
+                                            <th>Cut Specification</th>
+                                            <th>Moq (Volume)</th>
+                                            <th>Packaging</th>
+                                            <th>FOB Price Range (USD)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>Premium Yellowfin</th>
+                                            <td>Grade A Loins Chilled</td>
+                                            <td>1 Metric Ton</td>
+                                            <td>Foam Ice Box Chilled</td>
+                                            <td class="text-gold">$12,500 - $14,000 / Ton</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Premium Yellowfin</th>
+                                            <td>Super-Frozen (-60C) steaks</td>
+                                            <td>2 Metric Tons</td>
+                                            <td>Vacuum Sealed Carton</td>
+                                            <td class="text-gold">$14,500 - $16,200 / Ton</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Skipjack Tuna</th>
+                                            <td>Whole round blast frozen</td>
+                                            <td>5 Metric Tons</td>
+                                            <td>Bulk woven sacks</td>
+                                            <td class="text-gold">$2,800 - $3,400 / Ton</td>
+                                        </tr>
+                                        <tr>
+                                            <th>AQUATUNA™ Line</th>
+                                            <td>Canned Casing (48 per carton)</td>
+                                            <td>1 FCL Container</td>
+                                            <td>Cardboard Casing pallets</td>
+                                            <td class="text-gold">$42.50 - $48.00 / Case</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- JS Files -->
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const loginForm = document.getElementById("portal-login-form");
+            const authSection = document.getElementById("portal-auth-section");
+            const dashSection = document.getElementById("portal-dashboard-section");
+            const headerTitle = document.getElementById("portal-header-title");
+            
+            // RFQ Form items
+            const rfqForm = document.getElementById("portal-rfq-form");
+            const selectProd = document.getElementById("rfq-product");
+
+            // Setup product choices
+            const products = window.WishDB ? window.WishDB.getProducts() : [];
+            if (selectProd && products.length > 0) {
+                selectProd.innerHTML = products.map(p => `<option value="${p.name}">${p.name}</option>`).join('');
+            }
+
+            // Route parameters pre-population
+            const urlParams = new URLSearchParams(window.location.search);
+            const reqProduct = urlParams.get('rfq_product');
+            if (reqProduct && selectProd) {
+                // If query param is passed, we'll auto authenticate Hans Müller to show a seamless journey
+                setTimeout(() => {
+                    document.getElementById("auth-email").value = "h.mueller@nordicseafood.de";
+                    loginForm.dispatchEvent(new Event('submit'));
+                    switchPortalTab('rfq');
+                    selectProd.value = reqProduct;
+                }, 200);
+            }
+
+            // Auth Submission
+            if (loginForm) {
+                loginForm.addEventListener("submit", (e) => {
+                    e.preventDefault();
+                    
+                    const email = document.getElementById("auth-email").value;
+                    
+                    // Simulated success validation
+                    authSection.style.display = "none";
+                    dashSection.style.display = "block";
+                    headerTitle.innerText = "B2B Distributor Panel";
+                    
+                    document.getElementById("dash-company-name").innerText = email.includes("nordic") ? "Nordic Seafood GmbH" : "Global Seafood Importers";
+                    
+                    renderPortalRFQs();
+                });
+            }
+
+            // B2B RFQ Submission
+            if (rfqForm) {
+                rfqForm.addEventListener("submit", (e) => {
+                    e.preventDefault();
+                    
+                    const newRfq = {
+                        buyerName: "Hans Müller",
+                        companyName: document.getElementById("dash-company-name").innerText,
+                        email: document.getElementById("auth-email").value,
+                        phone: "+49 40 123456",
+                        productName: document.getElementById("rfq-product").value,
+                        quantity: document.getElementById("rfq-qty").value,
+                        country: document.getElementById("rfq-country").value,
+                        deliveryDate: document.getElementById("rfq-date").value,
+                        comments: document.getElementById("rfq-comments").value
+                    };
+
+                    if (window.WishDB) {
+                        window.WishDB.addRFQ(newRfq);
+                        alert(`Success!\nRFQ request logged under ID: ${newRfq.id || 'rfq-new'}.\nAn export desk agent will contact you shortly.`);
+                        rfqForm.reset();
+                        switchPortalTab('dashboard');
+                        renderPortalRFQs();
+                    }
+                });
+            }
+        });
+
+        // Tab manager
+        function switchPortalTab(tabId) {
+            // Setup buttons
+            document.querySelectorAll(".portal-nav-btn").forEach(btn => {
+                btn.classList.remove("active");
+                if (btn.getAttribute("onclick").includes(tabId)) btn.classList.add("active");
+            });
+
+            // Switch panes
+            document.querySelectorAll(".portal-pane").forEach(pane => {
+                pane.style.display = "none";
+            });
+            document.getElementById("tab-" + tabId).style.display = "block";
+            
+            if (tabId === 'dashboard') renderPortalRFQs();
+        }
+
+        // Render RFQ tables in portal dashboard
+        function renderPortalRFQs() {
+            const listTarget = document.getElementById("portal-rfq-list-target");
+            if (!listTarget) return;
+
+            const rfqs = window.WishDB ? window.WishDB.getRFQs() : [];
+            const company = document.getElementById("dash-company-name").innerText;
+            const filtered = rfqs.filter(r => r.companyName === company);
+
+            if (filtered.length === 0) {
+                listTarget.innerHTML = `
+                    <tr>
+                        <td colspan="6" style="text-align:center; padding: 20px 0;">No B2B RFQs submitted. Click 'Create RFQ' to submit your first project request.</td>
+                    </tr>
+                `;
+                return;
+            }
+
+            listTarget.innerHTML = filtered.map(r => `
+                <tr>
+                    <th>${r.id}</th>
+                    <td>${r.productName}</td>
+                    <td>${r.quantity}</td>
+                    <td>${r.deliveryDate}</td>
+                    <td>${new Date(r.submittedAt).toLocaleDateString()}</td>
+                    <td>
+                        <span class="status-badge ${r.status === 'Pending Review' ? 'status-pending' : 'status-approved'}">
+                            ${r.status}
+                        </span>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        function logoutPortal() {
+            window.location.reload();
+        }
+    </script>
+</body>
+</html>

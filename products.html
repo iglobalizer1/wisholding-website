@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Marine Products & Catalog | Wish Holdings</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Fonts / Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Featured Product Banners */
+        .featured-prod-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: var(--border-radius-md);
+            overflow: hidden;
+            transition: var(--transition-normal);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .featured-prod-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--color-accent);
+            background: rgba(255, 255, 255, 0.04);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+        .featured-img-box {
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+        }
+        .featured-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-slow);
+        }
+        .featured-prod-card:hover .featured-img-box img {
+            transform: scale(1.06);
+        }
+
+        /* Catalog Layout */
+        .catalog-layout {
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-lg);
+        }
+        @media (max-width: 992px) {
+            .catalog-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Filter Sidebar */
+        .filter-sidebar {
+            position: sticky;
+            top: 100px;
+        }
+        .filter-section {
+            margin-bottom: var(--spacing-md);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: var(--spacing-md);
+        }
+        .filter-title-sub {
+            font-size: 0.9rem;
+            color: var(--color-accent);
+            text-transform: uppercase;
+            font-family: var(--font-heading);
+            letter-spacing: 1px;
+            margin-bottom: var(--spacing-sm);
+        }
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+            color: var(--color-muted);
+            cursor: pointer;
+            transition: var(--transition-fast);
+        }
+        .checkbox-label:hover {
+            color: var(--color-accent);
+        }
+        .checkbox-label input {
+            accent-color: var(--color-accent);
+        }
+
+        /* Search input bar */
+        .search-bar-container {
+            display: flex;
+            background: #FFFFFF;
+            border: 1px solid var(--color-border);
+            border-radius: var(--border-radius-sm);
+            padding: 2px;
+            margin-bottom: var(--spacing-md);
+            box-shadow: var(--shadow-sm);
+        }
+        .search-input {
+            width: 100%;
+            padding: 0.8rem 1.2rem;
+            font-size: 0.95rem;
+            color: var(--color-text-heading);
+        }
+
+        /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: var(--spacing-md);
+        }
+        .prod-card {
+            border-radius: var(--border-radius-md);
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255,255,255,0.04);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            transition: var(--transition-normal);
+        }
+        .prod-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(212, 175, 55, 0.4);
+            background: rgba(255, 255, 255, 0.04);
+        }
+        .prod-image-wrapper {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+        .prod-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-slow);
+        }
+        .prod-card:hover .prod-image-wrapper img {
+            transform: scale(1.05);
+        }
+        .prod-info-box {
+            padding: var(--spacing-md);
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        /* Modal specific layout */
+        .modal-body {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--spacing-md);
+        }
+        @media (min-width: 768px) {
+            .modal-body {
+                grid-template-columns: 240px 1fr;
+            }
+        }
+        .modal-left img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: var(--border-radius-md);
+            margin-bottom: var(--spacing-sm);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Inner Page Header -->
+    <section class="inner-hero">
+        <div class="inner-hero-bg"></div>
+        <div class="container text-center">
+            <span class="section-subtitle">Premium Maldivian Seafood</span>
+            <h1 class="text-white">Our Marine Products</h1>
+            <p style="max-width: 650px; margin: 10px auto 0 auto; font-size: 1.15rem; color: rgba(255, 255, 255, 0.9);">
+                Traceable, sustainably harvested pole-and-line tuna and value-added exports processed under international food safety directives.
+            </p>
+        </div>
+    </section>
+
+    <!-- Primary Product Offerings (Yellowfin & Skipjack Spotlight) -->
+    <section class="section-padding" style="background-color: var(--color-primary);">
+        <div class="container">
+            <div class="text-center reveal" style="max-width: 650px; margin: 0 auto var(--spacing-xl) auto;">
+                <span class="section-subtitle">Primary Offerings</span>
+                <h2 class="text-white">Live Export Lines</h2>
+            </div>
+
+            <div class="grid-2" style="gap: var(--spacing-lg);">
+                <!-- Yellowfin Card -->
+                <div class="featured-prod-card reveal" style="transition-delay: 0.1s;">
+                    <div class="featured-img-box">
+                        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=800" alt="Yellowfin Tuna">
+                    </div>
+                    <div style="padding: var(--spacing-lg); display: flex; flex-direction: column; flex-grow: 1;">
+                        <span class="text-gold" style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 4px;">Thunnus albacares</span>
+                        <h3 class="text-white" style="font-size: 1.6rem; margin-bottom: 8px;">Yellowfin Tuna</h3>
+                        <p style="margin-bottom: var(--spacing-md); line-height: 1.6;">
+                            The Ocean's Golden Catch — premium, line-caught Maldivian tuna. Available in loins, chunks, steaks, Saku blocks, H&G, and G&G.
+                        </p>
+                        <div style="margin-top: auto; display: flex; gap: 10px;">
+                            <a href="yellowfin.html" class="btn btn-primary" style="flex: 1; text-align: center;"><i class="fas fa-arrow-right" style="margin-left: 6px;"></i> Product Details</a>
+                            <a href="contact.html?type=buyer#sales" class="btn btn-outline"><i class="fas fa-file-invoice"></i> Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skipjack Card -->
+                <div class="featured-prod-card reveal" style="transition-delay: 0.2s;">
+                    <div class="featured-img-box">
+                        <img src="https://images.unsplash.com/photo-1534483509719-3feaee7c30da?auto=format&fit=crop&q=80&w=800" alt="Skipjack Tuna">
+                    </div>
+                    <div style="padding: var(--spacing-lg); display: flex; flex-direction: column; flex-grow: 1;">
+                        <span class="text-gold" style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 4px;">Katsuwonus pelamis</span>
+                        <h3 class="text-white" style="font-size: 1.6rem; margin-bottom: 8px;">Skipjack Tuna</h3>
+                        <p style="margin-bottom: var(--spacing-md); line-height: 1.6;">
+                            The Heart of the Maldivian Fishery — 100% pole-and-line caught with full catch-to-package traceability and export freeze standards.
+                        </p>
+                        <div style="margin-top: auto; display: flex; gap: 10px;">
+                            <a href="skipjack.html" class="btn btn-primary" style="flex: 1; text-align: center;"><i class="fas fa-arrow-right" style="margin-left: 6px;"></i> Product Details</a>
+                            <a href="contact.html?type=buyer#sales" class="btn btn-outline"><i class="fas fa-file-invoice"></i> Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full B2B Catalog & Filter Area -->
+    <section class="section-padding" style="background-color: var(--color-secondary);">
+        <div class="container">
+            <div class="text-center reveal" style="max-width: 650px; margin: 0 auto var(--spacing-md) auto;">
+                <span class="section-subtitle">Catalog Explorer</span>
+                <h2 class="text-white">Full B2B Product Range</h2>
+            </div>
+
+            <div class="catalog-layout">
+                
+                <!-- Sidebar filters -->
+                <aside class="filter-sidebar reveal">
+                    <div class="glass-card" style="padding: var(--spacing-md);">
+                        <div class="filter-section">
+                            <h3 class="filter-title-sub">Categories</h3>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" value="raw-seafood" class="cat-filter" checked> Raw & Frozen Seafood
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" value="value-added" class="cat-filter" checked> Value-Added Products
+                                </label>
+                            </div>
+                        </div>
+                        <div class="filter-section" style="border-bottom:none; padding-bottom:0;">
+                            <h3 class="filter-title-sub">Certifications</h3>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label"><input type="checkbox" checked disabled> MSC Certified</label>
+                                <label class="checkbox-label"><input type="checkbox" checked disabled> Dolphin Safe</label>
+                                <label class="checkbox-label"><input type="checkbox" checked disabled> HACCP & FDA Compliant</label>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Product Listing Area -->
+                <main class="reveal" style="transition-delay: 0.1s;">
+                    <!-- Search input -->
+                    <div class="search-bar-container">
+                        <input type="text" class="search-input" id="catalog-search" placeholder="Search products by title, catch method, target market...">
+                        <button class="btn btn-primary" style="padding:0 var(--spacing-md); border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;" aria-label="Search"><i class="fas fa-search"></i></button>
+                    </div>
+
+                    <!-- Products Grid -->
+                    <div class="product-grid" id="products-listing">
+                        <!-- Dynamic items will load here -->
+                    </div>
+                </main>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Detail Modal -->
+    <div class="modal-overlay" id="detail-modal-overlay"></div>
+    <div class="modal-content" id="detail-modal-content" style="max-width: 850px;">
+        <span class="modal-close-btn" id="close-detail-modal"><i class="fas fa-times"></i></span>
+        <div id="modal-content-target">
+            <!-- Populated via script -->
+        </div>
+    </div>
+
+    <!-- JS Files -->
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const searchInput = document.getElementById("catalog-search");
+            const filterCheckboxes = document.querySelectorAll(".cat-filter");
+            const listingContainer = document.getElementById("products-listing");
+
+            // Modal elements
+            const overlay = document.getElementById("detail-modal-overlay");
+            const modal = document.getElementById("detail-modal-content");
+            const closeBtn = document.getElementById("close-detail-modal");
+            const contentTarget = document.getElementById("modal-content-target");
+
+            function renderProducts() {
+                const searchVal = searchInput ? searchInput.value.toLowerCase() : "";
+                const selectedCats = Array.from(filterCheckboxes)
+                    .filter(cb => cb.checked)
+                    .map(cb => cb.value);
+
+                const products = window.WishDB ? window.WishDB.getProducts() : [];
+                
+                // Filter
+                const filtered = products.filter(p => {
+                    const matchesSearch = p.name.toLowerCase().includes(searchVal) || 
+                                           p.description.toLowerCase().includes(searchVal) ||
+                                           (p.moq && p.moq.toLowerCase().includes(searchVal));
+                    const matchesCat = selectedCats.includes(p.category);
+                    return matchesSearch && matchesCat;
+                });
+
+                if (filtered.length === 0) {
+                    listingContainer.innerHTML = `
+                        <div style="grid-column: 1/-1; text-align: center; padding: var(--spacing-xl) 0;">
+                            <i class="fas fa-search" style="font-size: 3rem; color: rgba(255,255,255,0.1); margin-bottom: var(--spacing-sm);"></i>
+                            <h3 class="text-white">No Products Found</h3>
+                            <p>Try broadening your search query or selecting additional category filters.</p>
+                        </div>
+                    `;
+                    return;
+                }
+
+                listingContainer.innerHTML = filtered.map(p => {
+                    const targetLink = p.name.toLowerCase().includes("yellowfin") ? "yellowfin.html" : (p.name.toLowerCase().includes("skipjack") ? "skipjack.html" : null);
+
+                    return `
+                        <div class="prod-card">
+                            <div class="prod-image-wrapper">
+                                <img src="${p.image}" alt="${p.name}" onerror="this.src='https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=800'">
+                            </div>
+                            <div class="prod-info-box">
+                                <span class="prod-category-tag">${p.categoryLabel}</span>
+                                <h3 class="prod-title">${p.name}</h3>
+                                <p class="prod-desc-trim">${p.description.substring(0, 110)}...</p>
+                                <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid rgba(255,255,255,0.05); padding-top:var(--spacing-xs); margin-top:auto; gap: 8px;">
+                                    ${targetLink ? `<a href="${targetLink}" class="btn btn-outline" style="padding: 4px 10px; font-size: 0.75rem;"><i class="fas fa-eye"></i> Details</a>` : ''}
+                                    <button onclick="openDetails('${p.id}')" class="btn btn-primary" style="padding: 4px 10px; font-size: 0.75rem; flex: 1;"><i class="fas fa-list"></i> Specs</button>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+            }
+
+            // Event Listeners
+            if (searchInput) searchInput.addEventListener("input", renderProducts);
+            filterCheckboxes.forEach(cb => cb.addEventListener("change", renderProducts));
+            
+            if (closeBtn) {
+                closeBtn.addEventListener("click", () => {
+                    overlay.classList.remove("active");
+                    modal.classList.remove("active");
+                });
+            }
+            if (overlay) {
+                overlay.addEventListener("click", () => {
+                    overlay.classList.remove("active");
+                    modal.classList.remove("active");
+                });
+            }
+
+            // Initial render
+            renderProducts();
+
+            // Expose detail open function
+            window.openDetails = function(id) {
+                const prod = window.WishDB ? window.WishDB.getProductById(id) : null;
+                if (!prod) return;
+
+                // Build spec rows
+                let specRows = "";
+                if (prod.specifications) {
+                    for (const [key, val] of Object.entries(prod.specifications)) {
+                        specRows += `
+                            <tr>
+                                <th>${key}</th>
+                                <td>${val}</td>
+                            </tr>
+                        `;
+                    }
+                }
+
+                contentTarget.innerHTML = `
+                    <span class="section-subtitle">${prod.categoryLabel}</span>
+                    <h2 class="text-white" style="margin-bottom:var(--spacing-md);">${prod.name}</h2>
+                    
+                    <div class="modal-body">
+                        <div class="modal-left">
+                            <img src="${prod.image}" alt="${prod.name}">
+                            <div class="glass-card" style="padding:12px; font-size:0.8rem;">
+                                <div style="margin-bottom:6px;"><strong>MOQ:</strong> ${prod.moq || 'N/A'}</div>
+                                <div style="margin-bottom:6px;"><strong>Target Markets:</strong> ${prod.markets || 'Global'}</div>
+                                <div><strong>Certifications:</strong> HACCP, FDA, BRC Food</div>
+                            </div>
+                        </div>
+                        
+                        <div class="modal-right">
+                            <h4 class="text-gold" style="margin-bottom:5px;">Product Overview</h4>
+                            <p style="font-size:0.9rem; line-height:1.6; margin-bottom:var(--spacing-md); color:#E2E8F0;">${prod.description}</p>
+                            
+                            <h4 class="text-gold" style="margin-bottom:5px;">Applications & Usage</h4>
+                            <p style="font-size:0.9rem; line-height:1.6; margin-bottom:var(--spacing-md);">${prod.applications || 'Premium culinary preparations and wholesale food processing.'}</p>
+
+                            <h4 class="text-gold" style="margin-bottom:5px;">Packaging Details</h4>
+                            <p style="font-size:0.9rem; line-height:1.6; margin-bottom:var(--spacing-md);">${prod.packaging || 'Standard maritime transport configurations.'}</p>
+
+                            <h4 class="text-gold" style="margin-bottom:5px;">Technical Specifications</h4>
+                            <div class="spec-table-container">
+                                <table class="spec-table">
+                                    <tbody>
+                                        ${specRows || '<tr><td colspan="2">No detailed specifications.</td></tr>'}
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <div style="display:flex; gap:15px; margin-top:var(--spacing-md); flex-wrap:wrap;">
+                                <a href="portal.html?rfq_product=${encodeURIComponent(prod.name)}" class="btn btn-primary"><i class="fas fa-file-signature"></i> Request B2B Quote</a>
+                                <button onclick="simulatePdfDownload('${prod.name}')" class="btn btn-outline"><i class="fas fa-file-pdf text-danger"></i> Download Brochure</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                overlay.classList.add("active");
+                modal.classList.add("active");
+            };
+
+            window.simulatePdfDownload = function(prodName) {
+                alert(`Preparing documentation for: ${prodName}\nDownloading product technical catalog sheets (Brochure_WishHoldings_${prodName.replace(/\s+/g, '_')}.pdf).`);
+            };
+        });
+    </script>
+</body>
+</html>

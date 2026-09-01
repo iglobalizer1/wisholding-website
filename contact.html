@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Wish Holdings | Get in Touch</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Fonts / Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .contact-card-info {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: var(--border-radius-md);
+            padding: var(--spacing-lg);
+        }
+        .contact-info-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: var(--spacing-md);
+            color: var(--color-text-body);
+        }
+        .contact-info-list i {
+            color: var(--color-accent);
+            font-size: 1.2rem;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Inner Hero -->
+    <section class="inner-hero">
+        <div class="inner-hero-bg"></div>
+        <div class="container text-center">
+            <span class="section-subtitle">Head Office: Wish Group, Dubai, UAE</span>
+            <h1 class="text-white" style="margin-bottom: 8px;">Contact Wish Holdings</h1>
+            <p style="max-width: 750px; margin: 0 auto; font-size: 1.15rem; color: rgba(255, 255, 255, 0.9);">
+                Get in touch with Wish Holdings Pvt Ltd for seafood exports, processing partnerships, cold chain solutions, eco-tourism experiences, and ethical ocean investment collaboration.
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Contact Section -->
+    <section class="section-padding" style="background-color: var(--color-primary);">
+        <div class="container">
+            <div class="grid-2" style="gap: var(--spacing-xl); align-items: flex-start;">
+                
+                <!-- Form Area -->
+                <div class="glass-card reveal" style="padding: var(--spacing-xl);">
+                    
+                    <!-- Tab Switcher -->
+                    <div style="margin-bottom: var(--spacing-lg);">
+                        <div class="tab-buttons" style="width: 100%; display: flex;">
+                            <button class="tab-btn active" style="flex: 1; text-align: center;" onclick="switchContactTab('buyer', this)">Buyer / Export Quote</button>
+                            <button class="tab-btn" style="flex: 1; text-align: center;" onclick="switchContactTab('investor', this)">Investor / Partnership / Legal</button>
+                        </div>
+                    </div>
+
+                    <form id="contact-form" onsubmit="event.preventDefault(); alert('Thank you for contacting Wish Holdings. Our desk will respond to your request shortly.');">
+                        
+                        <div class="grid-2" style="gap: var(--spacing-md);">
+                            <div class="form-group">
+                                <label class="form-label">Name *</label>
+                                <input type="text" class="form-control" required placeholder="Your Name">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Email *</label>
+                                <input type="email" class="form-control" required placeholder="name@company.com">
+                            </div>
+                        </div>
+
+                        <div class="grid-2" style="gap: var(--spacing-md);">
+                            <div class="form-group">
+                                <label class="form-label">Phone</label>
+                                <input type="tel" class="form-control" placeholder="+960 000-0000">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Company</label>
+                                <input type="text" class="form-control" placeholder="Company Name">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Country</label>
+                            <input type="text" class="form-control" placeholder="Your Country">
+                        </div>
+
+                        <div id="buyer-fields">
+                            <div class="grid-2" style="gap: var(--spacing-md);">
+                                <div class="form-group">
+                                    <label class="form-label">Product Interest</label>
+                                    <select class="form-control" style="background: var(--color-secondary);">
+                                        <option value="">Select product</option>
+                                        <option value="Yellowfin Tuna">Yellowfin Tuna</option>
+                                        <option value="Skipjack Tuna">Skipjack Tuna</option>
+                                        <option value="Reef Fish">Reef Fish</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Monthly Volume</label>
+                                    <select class="form-control" style="background: var(--color-secondary);">
+                                        <option value="">Select volume</option>
+                                        <option value="1-5 tons">1-5 tons</option>
+                                        <option value="5-10 tons">5-10 tons</option>
+                                        <option value="10-20 tons">10-20 tons</option>
+                                        <option value="20+ tons">20+ tons</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-control" rows="4" placeholder="How can we assist your business?"></textarea>
+                        </div>
+
+                        <button type="submit" id="submit-btn" class="btn btn-primary" style="width: 100%;"><i class="fas fa-paper-plane" style="margin-right: 8px;"></i> Request Export Quote</button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="reveal" style="transition-delay: 0.1s;">
+                    <div class="contact-card-info" style="margin-bottom: var(--spacing-md);">
+                        <span class="section-subtitle">Corporate Desk</span>
+                        <h3 class="text-white" style="margin-bottom: var(--spacing-md);">Contact Information</h3>
+
+                        <ul class="contact-info-list">
+                            <li>
+                                <i class="fas fa-building"></i>
+                                <div>
+                                    <strong class="text-gold">Head Office</strong><br>
+                                    Wish Group, Dubai, UAE
+                                </div>
+                            </li>
+
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <strong class="text-gold">Address</strong><br>
+                                    Himmafushi, Kaafu Atoll, Medhu-Uthuru, Maldives
+                                </div>
+                            </li>
+
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <strong class="text-gold">Email</strong><br>
+                                    <a href="mailto:info@wishholdings.co" style="color: var(--color-text-heading); font-weight: 500;">info@wishholdings.co</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <i class="fas fa-phone-alt"></i>
+                                <div>
+                                    <strong class="text-gold">Phone</strong><br>
+                                    <a href="tel:+9609991095" style="color: var(--color-text-heading); font-weight: 500;">+960 999-1095</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <i class="fas fa-globe"></i>
+                                <div>
+                                    <strong class="text-gold">Website</strong><br>
+                                    <a href="https://www.wishholdings.co/" target="_blank" style="color: var(--color-accent); font-weight: 500;">www.wishholdings.co</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="glass-card text-center" style="padding: var(--spacing-lg);">
+                        <h4 class="text-white" style="margin-bottom: 6px;">"Let's build responsible ocean enterprise together."</h4>
+                        <p style="margin-bottom: var(--spacing-md); font-size: 0.9rem;">Chat directly with our export desk on WhatsApp.</p>
+                        <a href="https://wa.me/9609991095" target="_blank" class="btn btn-primary" style="background-color: #25D366; color: #FFFFFF; border: none;">
+                            <i class="fab fa-whatsapp" style="margin-right: 8px; font-size: 1.2rem;"></i> WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- JS Files -->
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        function switchContactTab(type, btn) {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const submitBtn = document.getElementById('submit-btn');
+            const buyerFields = document.getElementById('buyer-fields');
+
+            if (type === 'buyer') {
+                buyerFields.style.display = 'block';
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane" style="margin-right: 8px;"></i> Request Export Quote';
+            } else {
+                buyerFields.style.display = 'none';
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane" style="margin-right: 8px;"></i> Submit Corporate Inquiry';
+            }
+        }
+
+        // Auto tab select from URL query string
+        document.addEventListener("DOMContentLoaded", function() {
+            const params = new URLSearchParams(window.location.search);
+            const type = params.get("type");
+            if (type === "investor" || type === "partner" || type === "legal") {
+                const tabs = document.querySelectorAll('.tab-btn');
+                if (tabs.length > 1) switchContactTab('investor', tabs[1]);
+            }
+        });
+    </script>
+</body>
+</html>

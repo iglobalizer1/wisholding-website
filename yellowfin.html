@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yellowfin Tuna | Wish Holdings Products</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Fonts / Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Product Hero */
+        .prod-hero {
+            padding-top: 150px;
+            padding-bottom: var(--spacing-xl);
+            background: linear-gradient(180deg, rgba(10, 17, 40, 0.95) 0%, rgba(28, 37, 65, 0.9) 100%), url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=1920');
+            background-size: cover;
+            background-position: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Anatomy Explorer */
+        .anatomy-container {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: var(--border-radius-lg);
+            padding: var(--spacing-lg);
+            margin-top: var(--spacing-md);
+        }
+        .anatomy-display-box {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+            align-items: center;
+        }
+        .anatomy-interactive-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: var(--spacing-md);
+        }
+        .anatomy-tag-btn {
+            background: var(--color-surface-subtle);
+            border: 1px solid var(--color-border);
+            color: var(--color-text-heading);
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: var(--transition-fast);
+        }
+        .anatomy-tag-btn:hover, .anatomy-tag-btn.active {
+            background: var(--color-accent);
+            color: #FFFFFF;
+            border-color: var(--color-accent);
+            font-weight: 700;
+            box-shadow: 0 0 15px rgba(2, 132, 199, 0.3);
+        }
+        .anatomy-info-panel {
+            background: #FFFFFF;
+            border: 1px solid var(--color-accent);
+            border-radius: var(--border-radius-md);
+            padding: var(--spacing-md);
+            max-width: 700px;
+            width: 100%;
+            text-align: center;
+            min-height: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-shadow: var(--shadow-card);
+        }
+
+        /* Cuts Slide Card */
+        .cuts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: var(--spacing-md);
+        }
+        .cut-card {
+            background: #FFFFFF;
+            border: 1px solid var(--color-border);
+            border-radius: var(--border-radius-md);
+            padding: var(--spacing-md);
+            transition: var(--transition-normal);
+            box-shadow: var(--shadow-card);
+        }
+        .cut-card:hover {
+            border-color: var(--color-accent);
+            box-shadow: var(--shadow-card-hover);
+            transform: translateY(-4px);
+        }
+
+        /* Formats Grid */
+        .format-badge {
+            background: var(--color-surface-subtle);
+            border: 1px solid var(--color-border);
+            border-radius: var(--border-radius-md);
+            padding: var(--spacing-md);
+            text-align: center;
+        }
+        .format-weight {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--color-accent);
+            margin-top: 6px;
+        }
+
+        /* Accordion */
+        .faq-item {
+            background: #FFFFFF;
+            border: 1px solid var(--color-border);
+            border-radius: var(--border-radius-md);
+            margin-bottom: var(--spacing-xs);
+            overflow: hidden;
+            box-shadow: var(--shadow-card);
+        }
+        .faq-question {
+            padding: var(--spacing-md);
+            font-weight: 600;
+            color: var(--color-text-heading);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-answer {
+            padding: 0 var(--spacing-md) var(--spacing-md) var(--spacing-md);
+            color: var(--color-text-body);
+            font-size: 0.95rem;
+            display: none;
+            line-height: 1.6;
+        }
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        .faq-item.active .faq-question {
+            color: var(--color-accent);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Product Hero -->
+    <section class="prod-hero">
+        <div class="container text-center">
+            <span class="section-subtitle">Premium Line-Caught Tuna</span>
+            <h1 class="text-white" style="margin-bottom: 8px;">Yellowfin Tuna</h1>
+            <p style="max-width: 650px; margin: 0 auto var(--spacing-lg) auto; font-size: 1.2rem; color: var(--color-text-body); font-weight: 500;">
+                The Ocean's Golden Catch — premium, line-caught Maldivian tuna.
+            </p>
+            <div style="display: flex; justify-content: center; gap: var(--spacing-sm); flex-wrap: wrap;">
+                <a href="contact.html?type=buyer#sales" class="btn btn-primary"><i class="fas fa-headset" style="margin-right: 8px;"></i> Talk to Sales</a>
+                <a href="contact.html?type=partner" class="btn btn-outline"><i class="fas fa-handshake" style="margin-right: 8px;"></i> Become a Distributor</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Overview -->
+    <section class="section-padding" style="background-color: var(--color-primary);">
+        <div class="container">
+            <div class="grid-2" style="align-items: center; gap: var(--spacing-xl);">
+                <div class="reveal hover-zoom-container" style="border-radius: var(--border-radius-lg); max-height: 420px;">
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=800" alt="Yellowfin Tuna Thunnus albacares">
+                </div>
+                <div class="reveal">
+                    <span class="section-subtitle">Product Overview</span>
+                    <h2 class="text-white" style="margin-bottom: 4px;">Yellowfin Tuna</h2>
+                    <p class="text-gold" style="font-size: 1.1rem; font-style: italic; font-weight: 600; margin-bottom: var(--spacing-md);">Thunnus albacares</p>
+                    <p style="margin-bottom: var(--spacing-sm); font-size: 1.05rem; line-height: 1.7; color: var(--color-text-heading);">
+                        Renowned for its firm texture, rich flavor, and vibrant color, Yellowfin Tuna is one of the Maldives' most prized ocean treasures.
+                    </p>
+                    <p style="margin-bottom: var(--spacing-md); line-height: 1.7;">
+                        At Wish Harbour Himmafushi, every Yellowfin is line-caught, ensuring minimal bycatch and maximum freshness. Our processing workflow ensures export-grade quality from catch to packing with strict temperature and hygiene control.
+                    </p>
+
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <div style="display: flex; gap: 10px; align-items: flex-start;">
+                            <i class="fas fa-check-circle text-gold" style="margin-top: 4px;"></i>
+                            <div><strong>Firm texture</strong> — Premium quality with excellent mouthfeel</div>
+                        </div>
+                        <div style="display: flex; gap: 10px; align-items: flex-start;">
+                            <i class="fas fa-check-circle text-gold" style="margin-top: 4px;"></i>
+                            <div><strong>Rich flavor</strong> — Distinctive taste profile preferred by chefs worldwide</div>
+                        </div>
+                        <div style="display: flex; gap: 10px; align-items: flex-start;">
+                            <i class="fas fa-check-circle text-gold" style="margin-top: 4px;"></i>
+                            <div><strong>Sustainable catching</strong> — Line-caught methods ensure minimal bycatch</div>
+                        </div>
+                        <div style="display: flex; gap: 10px; align-items: flex-start;">
+                            <i class="fas fa-check-circle text-gold" style="margin-top: 4px;"></i>
+                            <div><strong>Freshness focus</strong> — Rapid processing and blast-freezing preserve quality</div>
+                        </div>
+                        <div style="display: flex; gap: 10px; align-items: flex-start;">
+                            <i class="fas fa-check-circle text-gold" style="margin-top: 4px;"></i>
+                            <div><strong>Export-ready handling</strong> — Designed to meet EU-grade export requirements</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Anatomy Explorer -->
+    <section class="section-padding" style="background-color: var(--color-secondary);">
+        <div class="container">
+            <div class="text-center reveal" style="max-width: 650px; margin: 0 auto var(--spacing-md) auto;">
+                <span class="section-subtitle">Interactive Learning</span>
+                <h2 class="text-white">Tuna Anatomy Explorer</h2>
+                <p>Hover over or click the markers and buttons below to learn about different parts of the yellowfin tuna and understand how each section contributes to our premium products.</p>
+            </div>
+
+            <div class="anatomy-container reveal">
+                <div class="anatomy-display-box">
+                    <!-- Stylized SVG Tuna Illustration with clickable hotspots -->
+                    <div style="position: relative; width: 100%; max-width: 800px;">
+                        <svg viewBox="0 0 800 400" style="width: 100%; height: auto;">
+                            <!-- Tuna Body Silhouette -->
+                            <path d="M 120 200 Q 180 80 400 90 Q 600 100 700 190 L 760 130 L 750 200 L 760 270 L 700 210 Q 600 300 400 310 Q 180 320 120 200 Z" fill="#1C2541" stroke="#D4AF37" stroke-width="3"/>
+                            <!-- Eye -->
+                            <circle cx="170" cy="180" r="14" fill="#0A1128" stroke="#D4AF37" stroke-width="2"/>
+                            <circle cx="168" cy="178" r="5" fill="#FFFFFF"/>
+                            <!-- Yellow Lateral Stripe -->
+                            <path d="M 190 190 Q 400 180 680 200" stroke="#FFD700" stroke-width="6" fill="none" opacity="0.8"/>
+                            <!-- First Dorsal Fin -->
+                            <path d="M 280 110 Q 320 30 380 95" fill="#FFD700" stroke="#D4AF37" stroke-width="2"/>
+                            <!-- Second Dorsal Fin -->
+                            <path d="M 460 95 Q 500 20 540 105" fill="#FFD700" stroke="#D4AF37" stroke-width="2"/>
+                            <!-- Caudal Keel & Tail -->
+                            <path d="M 680 195 L 750 140 L 735 200 L 750 260 Z" fill="#D4AF37"/>
+                            <!-- Pectoral Fin -->
+                            <path d="M 260 210 Q 340 240 360 260 Q 310 230 260 210" fill="#FFD700" stroke="#D4AF37" stroke-width="1.5"/>
+                            <!-- Pelvic Fin -->
+                            <path d="M 270 275 Q 300 330 320 310" fill="#FFD700" stroke="#D4AF37"/>
+                            <!-- Anal Fin -->
+                            <path d="M 480 305 Q 520 380 550 295" fill="#FFD700" stroke="#D4AF37"/>
+                            <!-- Finlets -->
+                            <path d="M 570 105 L 585 90 L 595 105 Z M 610 110 L 625 95 L 635 110 Z M 650 115 L 662 103 L 670 115 Z" fill="#FFD700"/>
+                            <path d="M 570 295 L 585 310 L 595 295 Z M 610 290 L 625 305 L 635 290 Z M 650 285 L 662 297 L 670 285 Z" fill="#FFD700"/>
+                        </svg>
+                    </div>
+
+                    <!-- Interactive Part Buttons -->
+                    <div class="anatomy-interactive-tags" id="anatomy-tags">
+                        <button class="anatomy-tag-btn active" onclick="showAnatomy('first-dorsal', this)">First Dorsal Fin</button>
+                        <button class="anatomy-tag-btn" onclick="showAnatomy('second-dorsal', this)">Second Dorsal Fin</button>
+                        <button class="anatomy-tag-btn" onclick="showAnatomy('caudal-fin', this)">Caudal (Tail) Fin</button>
+                        <button class="anatomy-tag-btn" onclick="showAnatomy('pectoral-fin', this)">Pectoral Fin</button>
+                        <button class="anatomy-tag-btn" onclick="showAnatomy('pelvic-fin', this)">Pelvic (Ventral) Fin</button>
+                        <button class="anatomy-tag-btn" onclick="showAnatomy('anal-fin', this)">Anal Fin</button>
+                        <button class="anatomy-tag-btn" onclick="showAnatomy('finlets', this)">Yellow Finlets</button>
+                        <button class="anatomy-tag-btn" onclick="showAnatomy('eye', this)">Eye</button>
+                        <button class="anatomy-tag-btn" onclick="showAnatomy('stripe', this)">Yellow Lateral Stripe</button>
+                        <button class="anatomy-tag-btn" onclick="showAnatomy('keel', this)">Caudal Keel</button>
+                    </div>
+
+                    <!-- Information Display Panel -->
+                    <div class="anatomy-info-panel" id="anatomy-info">
+                        <h4 class="text-gold" id="anatomy-title" style="margin-bottom: 6px; font-size: 1.2rem;">First Dorsal Fin</h4>
+                        <p id="anatomy-desc" style="font-size: 0.95rem;">
+                            Large, retractable fin that stabilizes high-speed swimming in open ocean currents.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Primary Cuts -->
+    <section class="section-padding" style="background-color: var(--color-primary);">
+        <div class="container">
+            <div class="text-center reveal" style="max-width: 650px; margin: 0 auto var(--spacing-xl) auto;">
+                <span class="section-subtitle">Primary Cuts</span>
+                <h2 class="text-white">Understanding Yellowfin Tuna Cuts</h2>
+                <p>Yellowfin tuna is processed into four loins, two top (akami) loins and two bottom (otoro) loins, each type is distinct and used for specific dishes.</p>
+            </div>
+
+            <div class="cuts-grid">
+                <div class="cut-card reveal" style="transition-delay: 0.1s;">
+                    <span class="text-gold" style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">Top Loin</span>
+                    <h3 class="text-white" style="margin: 4px 0 8px 0;">Akami</h3>
+                    <p style="font-size: 0.9rem;">
+                        Akami, or top loin, has leaner meat with a slightly more intense flavour. It's ideal for sashimi, carpaccio, gourmet, and grilling.
+                    </p>
+                </div>
+
+                <div class="cut-card reveal" style="transition-delay: 0.2s;">
+                    <span class="text-gold" style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">Bottom Loin</span>
+                    <h3 class="text-white" style="margin: 4px 0 8px 0;">Otoro</h3>
+                    <p style="font-size: 0.9rem;">
+                        Otoro is the fattiest part of a tuna, especially near the belly. It has a sophisticated taste and distinctive fat marbling.
+                    </p>
+                </div>
+
+                <div class="cut-card reveal" style="transition-delay: 0.3s;">
+                    <span class="text-gold" style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">Front Portion</span>
+                    <h3 class="text-white" style="margin: 4px 0 8px 0;">Head Chunk</h3>
+                    <p style="font-size: 0.9rem;">
+                        The portion closest to the head of the fish. It has less size variances at the ends, and provides better yield compared to the tail loin.
+                    </p>
+                </div>
+
+                <div class="cut-card reveal" style="transition-delay: 0.4s;">
+                    <span class="text-gold" style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">Middle Portion</span>
+                    <h3 class="text-white" style="margin: 4px 0 8px 0;">Centre Cut</h3>
+                    <p style="font-size: 0.9rem;">
+                        The middle part of loin, and has uniform thickness on both ends. It has the highest yield and is the most costly part of the loin.
+                    </p>
+                </div>
+
+                <div class="cut-card reveal" style="transition-delay: 0.5s;">
+                    <span class="text-gold" style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">Tail Portion</span>
+                    <h3 class="text-white" style="margin: 4px 0 8px 0;">End Chunk</h3>
+                    <p style="font-size: 0.9rem;">
+                        The portion of the loin that is closest to the tail of the fish. It has the most size variance on both ends, and is the least costly part of the loin.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Export Formats & Products -->
+    <section class="section-padding" style="background-color: var(--color-secondary);">
+        <div class="container">
+            <div class="text-center reveal" style="max-width: 650px; margin: 0 auto var(--spacing-xl) auto;">
+                <span class="section-subtitle">Our Products</span>
+                <h2 class="text-white">Yellowfin Products & Export Formats</h2>
+                <p>Formats and weights can be customized for buyers and distributors.</p>
+            </div>
+
+            <div class="grid-4" style="gap: var(--spacing-md);">
+                <div class="format-badge reveal" style="transition-delay: 0.1s;">
+                    <h4 class="text-white">Yellowfin Tuna Loin</h4>
+                    <div class="format-weight">2–4 kg</div>
+                </div>
+
+                <div class="format-badge reveal" style="transition-delay: 0.15s;">
+                    <h4 class="text-white">Yellowfin Tuna Chunks</h4>
+                    <div class="format-weight">2–4 kg</div>
+                </div>
+
+                <div class="format-badge reveal" style="transition-delay: 0.2s;">
+                    <h4 class="text-white">Yellowfin Tuna Steaks</h4>
+                    <div class="format-weight">200–350 g</div>
+                </div>
+
+                <div class="format-badge reveal" style="transition-delay: 0.25s;">
+                    <h4 class="text-white">Yellowfin Tuna Saku Blocks</h4>
+                    <div class="format-weight">200–350 g</div>
+                </div>
+
+                <div class="format-badge reveal" style="transition-delay: 0.3s;">
+                    <h4 class="text-white">Yellowfin Tuna Cubes</h4>
+                    <div class="format-weight">1 kg</div>
+                </div>
+
+                <div class="format-badge reveal" style="transition-delay: 0.35s;">
+                    <h4 class="text-white">Yellowfin Tuna Blocks</h4>
+                    <div class="format-weight">0.5–1 kg</div>
+                </div>
+
+                <div class="format-badge reveal" style="transition-delay: 0.4s;">
+                    <h4 class="text-white">G&G (Gilled & Gutted)</h4>
+                    <div class="format-weight">30 kg</div>
+                </div>
+
+                <div class="format-badge reveal" style="transition-delay: 0.45s;">
+                    <h4 class="text-white">H&G (Headed & Gutted)</h4>
+                    <div class="format-weight">30 kg</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customization & Packaging -->
+    <section class="section-padding" style="background-color: var(--color-primary);">
+        <div class="container">
+            <div class="text-center reveal" style="max-width: 650px; margin: 0 auto var(--spacing-lg) auto;">
+                <span class="section-subtitle">Product Options</span>
+                <h2 class="text-white">Customization & Packaging</h2>
+                <p>Customize your yellowfin tuna cuts to meet your specific requirements.</p>
+            </div>
+
+            <div class="text-center reveal" style="margin-bottom: var(--spacing-lg);">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" onclick="switchOptionTab('cuts', this)">Cut Options</button>
+                    <button class="tab-btn" onclick="switchOptionTab('wrap', this)">Wrap Options</button>
+                    <button class="tab-btn" onclick="switchOptionTab('packaging', this)">Packaging Options</button>
+                </div>
+            </div>
+
+            <div id="option-tab-content" class="reveal">
+                <div class="grid-3" style="gap: var(--spacing-md);">
+                    <div class="glass-card">
+                        <h4 class="text-gold" style="margin-bottom: 6px;"><i class="fas fa-cut" style="margin-right:8px;"></i> Skin On/Off</h4>
+                        <p style="font-size: 0.9rem;">Choose whether to keep the skin on or remove it based on your preparation needs and customer preferences.</p>
+                    </div>
+
+                    <div class="glass-card">
+                        <h4 class="text-gold" style="margin-bottom: 6px;"><i class="fas fa-utensils" style="margin-right:8px;"></i> Belly On/Off</h4>
+                        <p style="font-size: 0.9rem;">Option to include or exclude the belly portion, depending on your product specifications and market requirements.</p>
+                    </div>
+
+                    <div class="glass-card">
+                        <h4 class="text-gold" style="margin-bottom: 6px;"><i class="fas fa-drumstick-bite" style="margin-right:8px;"></i> Muscle On/Off</h4>
+                        <p style="font-size: 0.9rem;">Customize muscle inclusion based on your processing needs and final product requirements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sustainability & Export Markets -->
+    <section class="section-padding" style="background-color: var(--color-secondary);">
+        <div class="container">
+            <div class="grid-2" style="gap: var(--spacing-xl);">
+                <div class="glass-card reveal">
+                    <span class="section-subtitle">Sustainability</span>
+                    <h3 class="text-white" style="margin-bottom: var(--spacing-md);">Sustainability Commitment</h3>
+                    <ul style="display: flex; flex-direction: column; gap: 12px; color: var(--color-text-body);">
+                        <li><i class="fas fa-check text-gold" style="margin-right: 8px;"></i> Partner in Maldives' MSC-certified tuna fishery</li>
+                        <li><i class="fas fa-check text-gold" style="margin-right: 8px;"></i> Pole-and-line fishing & handline methods</li>
+                        <li><i class="fas fa-check text-gold" style="margin-right: 8px;"></i> Significantly reduced bycatch and marine preservation</li>
+                        <li><i class="fas fa-check text-gold" style="margin-right: 8px;"></i> Directly supports local Maldivian fishing livelihoods</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card reveal" style="transition-delay: 0.1s;">
+                    <span class="section-subtitle">Global Reach</span>
+                    <h3 class="text-white" style="margin-bottom: var(--spacing-md);">Export Markets</h3>
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: var(--spacing-md);">
+                        <span class="hero-pill"><i class="fas fa-globe-asia" style="margin-right:6px;"></i> Asia</span>
+                        <span class="hero-pill"><i class="fas fa-globe-europe" style="margin-right:6px;"></i> Europe</span>
+                        <span class="hero-pill"><i class="fas fa-globe-africa" style="margin-right:6px;"></i> Middle East</span>
+                        <span class="hero-pill"><i class="fas fa-globe-americas" style="margin-right:6px;"></i> USA</span>
+                        <span class="hero-pill"><i class="fas fa-flag-usa" style="margin-right:6px;"></i> Canada</span>
+                    </div>
+                    <p style="font-size: 0.95rem;">
+                        Positioned for global markets. Complete export documentation, sanitary certificates, and compliance support available.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buyer FAQ Section -->
+    <section class="section-padding" style="background-color: var(--color-primary);">
+        <div class="container" style="max-width: 850px;">
+            <div class="text-center reveal" style="margin-bottom: var(--spacing-xl);">
+                <span class="section-subtitle">Buyer FAQ</span>
+                <h2 class="text-white">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="reveal">
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>What is the Minimum Order Quantity (MOQ)?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Our standard MOQ for air-freight fresh tuna loins starts at 500 kg. For sea-freight frozen containers (20ft / 40ft reefer), MOQ is 10 metric tons, customizable based on product format.
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>What is the typical lead time?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Air export shipments are dispatched within 24–48 hours of harvest. Frozen sea-freight container orders typically take 7–14 business days from order confirmation to departure.
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>Is private labeling available?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Yes, we offer custom private labeling, customized vacuum pack printing, master carton branding, and tailored weight specifications for wholesale distributors.
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>What certifications do you have?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Our processing operations hold HACCP, ISO 22000, EU Export Approval, FDA Registration, and MSC Chain of Custody certification.
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>What shipping options are available?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        We offer FOB Malé, CIF major international ports, and door-to-door temperature-monitored air/sea logistics through global freight partners.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JS Files -->
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        const anatomyData = {
+            'first-dorsal': { title: 'First Dorsal Fin', desc: 'Large, retractable fin that stabilizes high-speed swimming in open ocean currents.' },
+            'second-dorsal': { title: 'Second Dorsal Fin', desc: 'Vibrant golden fin that gives Yellowfin Tuna its iconic appearance and assists in precise directional control.' },
+            'caudal-fin': { title: 'Caudal (Tail) Fin', desc: 'Powerful crescent tail providing explosive propulsion through Indian Ocean waters.' },
+            'pectoral-fin': { title: 'Pectoral Fin', desc: 'Long side fin used for maneuvering and depth control during line harvesting.' },
+            'pelvic-fin': { title: 'Pelvic (Ventral) Fin', desc: 'Ventral stabilization fin helping maintain hydrodynamic balance.' },
+            'anal-fin': { title: 'Anal Fin', desc: 'Bright yellow ventral fin aiding in hydrodynamic efficiency.' },
+            'finlets': { title: 'Yellow Finlets', desc: 'Small serrated finlets along the tail ridge that reduce drag and turbulent water eddies.' },
+            'eye': { title: 'Eye', desc: 'Keen visual sensory organ enabling deep-water hunting in clear Maldivian seas.' },
+            'stripe': { title: 'Yellow Lateral Stripe', desc: 'Distinctive golden metallic band along the flank denoting peak health and freshness.' },
+            'keel': { title: 'Caudal Keel', desc: 'Rigid lateral ridge near the tail that minimizes drag during high-velocity swimming.' }
+        };
+
+        function showAnatomy(key, btn) {
+            document.querySelectorAll('.anatomy-tag-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const data = anatomyData[key];
+            if (data) {
+                document.getElementById('anatomy-title').innerText = data.title;
+                document.getElementById('anatomy-desc').innerText = data.desc;
+            }
+        }
+
+        function switchOptionTab(type, btn) {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+        }
+
+        function toggleFaq(element) {
+            element.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

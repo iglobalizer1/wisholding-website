@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infrastructure & Quality Control - Wish Holdings</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Fonts / Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Certification grids */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-lg);
+        }
+        .cert-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: var(--border-radius-md);
+            padding: var(--spacing-md);
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition-normal);
+        }
+        .cert-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--color-accent);
+            background: rgba(255, 255, 255, 0.04);
+        }
+        .cert-icon {
+            font-size: 2.5rem;
+            color: var(--color-accent);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        /* Flow diagram blocks */
+        .flow-container {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-lg);
+            position: relative;
+        }
+        .flow-step {
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255,255,255,0.04);
+            border-radius: var(--border-radius-md);
+            padding: var(--spacing-md);
+            position: relative;
+        }
+        .flow-step-num {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--color-accent);
+            color: var(--color-primary);
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .flow-step h3 {
+            font-size: 1.15rem;
+            margin-bottom: 5px;
+        }
+
+        /* Lab feature highlight */
+        .lab-highlight {
+            border-left: 3px solid var(--color-aqua);
+            background: rgba(0, 242, 254, 0.02);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Inner Page Header -->
+    <section class="inner-hero">
+        <div class="inner-hero-bg"></div>
+        <div class="container text-center">
+            <span class="section-subtitle">Manufacturing Excellence</span>
+            <h1 class="text-white">Infrastructure & Quality</h1>
+            <p style="max-width: 600px; margin: 10px auto 0 auto;">Tour our state-of-the-art freezing tunnels, automated processing lines, and chemical testing laboratories.</p>
+        </div>
+    </section>
+
+    <!-- Factory Tour overview -->
+    <section class="section-padding" style="background-color: var(--color-primary);">
+        <div class="container">
+            <div class="grid-2" style="align-items: center; gap: var(--spacing-xl);">
+                <div class="reveal">
+                    <span class="section-subtitle">Himmafushi Hub</span>
+                    <h2 class="text-white" style="margin-bottom: var(--spacing-md);">Modern Processing Lines</h2>
+                    <p style="margin-bottom: var(--spacing-sm);">
+                        Our primary production operations are centered at the Himmafushi Processing Plant. Designed to meet strict European Union and US FDA sanitation policies, the plant manages a continuous cold chain from dock reception to container packing.
+                    </p>
+                    <p style="margin-bottom: var(--spacing-sm);">
+                        With a capacity of **15,000 Metric Tons annually**, the facility features automated loin cutting machines, IQF (Individually Quick Frozen) lines, and a dedicated canning hall. We operate under a "no temperature breach" system, ensuring all raw seafood is maintained below -2°C prior to freezing.
+                    </p>
+                    <p style="margin-bottom: var(--spacing-md);">
+                        The entire facility operates on an integrated rooftop solar farm and redirects organic processing trim into fishmeal and fertilizer production, maintaining a zero-waste policy.
+                    </p>
+                    <div class="grid-2 text-center" style="gap:15px;">
+                        <div class="glass-card" style="padding:15px;">
+                            <h4 class="text-gold" style="font-size:1.5rem;">-60°C</h4>
+                            <p style="font-size:0.75rem; text-transform:uppercase;">Super-Freeze Capability</p>
+                        </div>
+                        <div class="glass-card" style="padding:15px;">
+                            <h4 class="text-gold" style="font-size:1.5rem;">85%</h4>
+                            <p style="font-size:0.75rem; text-transform:uppercase;">Solar Powered Grid</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal hover-zoom-container" style="transition-delay: 0.1s; border-radius: var(--border-radius-lg); height: 420px;">
+                    <img src="https://images.unsplash.com/photo-1551244072-5d12893278ab?auto=format&fit=crop&q=80&w=800" alt="Processing Plant Automation" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Processing Workflow -->
+    <section class="section-padding" style="background-color: var(--color-secondary);">
+        <div class="container">
+            <div class="text-center reveal" style="max-width: 600px; margin: 0 auto var(--spacing-xl) auto;">
+                <span class="section-subtitle">Industrial Workflow</span>
+                <h2 class="text-white">Our Processing Workflow</h2>
+                <p>Ensuring complete product integrity at each operational stage.</p>
+            </div>
+            
+            <div class="flow-container">
+                <div class="flow-step reveal" style="transition-delay: 0.1s;">
+                    <div class="flow-step-num">01</div>
+                    <div>
+                        <h3 class="text-white">Vessel Offloading & Grading</h3>
+                        <p>Artisanal vessels dock at our solar-powered berths. Every single fish is inspected for temperature, graded for fat content, tagged with a unique barcode indicating vessel origin, and logged in our digital database.</p>
+                    </div>
+                </div>
+                
+                <div class="flow-step reveal" style="transition-delay: 0.2s;">
+                    <div class="flow-step-num">02</div>
+                    <div>
+                        <h3 class="text-white">Primary Gutting & Chilling</h3>
+                        <p>Tuna is washed, headed, and gutted in temperature-controlled rooms kept below 10°C. Raw meat is graded for color index and sent to blast chillers.</p>
+                    </div>
+                </div>
+
+                <div class="flow-step reveal" style="transition-delay: 0.3s;">
+                    <div class="flow-step-num">03</div>
+                    <div>
+                        <h3 class="text-white">Loin Processing & Canning</h3>
+                        <p>Premium cuts are filleted into loins, vacuum packed, and frozen. Trim cuts are sent to the canned tuna section for packing in premium olive oil or organic brine.</p>
+                    </div>
+                </div>
+
+                <div class="flow-step reveal" style="transition-delay: 0.4s;">
+                    <div class="flow-step-num">04</div>
+                    <div>
+                        <h3 class="text-white">Super-Freezing & Storage</h3>
+                        <p>Finished loins are frozen to -60°C to lock in sashimi quality and color. Cans are sterilized in steam autoclaves, labeled, and boxed for container transport.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lab Quality Testing -->
+    <section class="section-padding" style="background-color: var(--color-primary);">
+        <div class="container">
+            <div class="grid-2" style="align-items: center; gap: var(--spacing-xl);">
+                <div class="reveal hover-zoom-container" style="border-radius: var(--border-radius-lg); height: 400px;">
+                    <img src="https://images.unsplash.com/photo-1579154204601-01588f351167?auto=format&fit=crop&q=80&w=800" alt="Chemical Laboratory QA" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="reveal" style="transition-delay: 0.1s;">
+                    <span class="section-subtitle">Laboratory Audits</span>
+                    <h2 class="text-white" style="margin-bottom: var(--spacing-md);">Rigorous Food Safety Assurance</h2>
+                    <p style="margin-bottom: var(--spacing-sm);">
+                        Our on-site testing facility is equipped to perform daily chemical and microbiological testing. We test each batch for histamine levels, heavy metal presence, bacterial count, and organoleptic properties.
+                    </p>
+                    <div class="glass-card lab-highlight" style="padding: var(--spacing-md); margin-bottom: var(--spacing-sm);">
+                        <h4 class="text-white" style="margin-bottom:5px;"><i class="fas fa-microscope text-aqua"></i> Histamine Control Program</h4>
+                        <p style="font-size:0.9rem;">We enforce a strict thermal limit program that limits histamine levels below 10ppm, well exceeding the EU and US FDA safety requirement of 50ppm.</p>
+                    </div>
+                    <p style="font-size:0.95rem;">
+                        No container is released for export without a signed certificate of quality analysis issued directly by our Lead Biochemist, ensuring full safety for global consumers.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certification Board -->
+    <section class="section-padding" style="background-color: var(--color-secondary);">
+        <div class="container">
+            <div class="text-center reveal" style="max-width: 600px; margin: 0 auto var(--spacing-lg) auto;">
+                <span class="section-subtitle">Accreditations</span>
+                <h2 class="text-white">International Certifications</h2>
+                <p>Click any credential below to read its compliance parameters and view/download our certified documents.</p>
+            </div>
+            
+            <div class="cert-grid">
+                <div class="cert-card reveal" style="transition-delay: 0.1s;" onclick="openCert('HACCP')">
+                    <div class="cert-icon"><i class="fas fa-shield-halved"></i></div>
+                    <h4 class="text-white">HACCP</h4>
+                    <p style="font-size:0.8rem; color:var(--color-muted); margin-top:5px;">Hazard Analysis Critical Control Point</p>
+                </div>
+
+                <div class="cert-card reveal" style="transition-delay: 0.2s;" onclick="openCert('FSSC 22000')">
+                    <div class="cert-icon"><i class="fas fa-award"></i></div>
+                    <h4 class="text-white">FSSC 22000</h4>
+                    <p style="font-size:0.8rem; color:var(--color-muted); margin-top:5px;">Food Safety System Certification</p>
+                </div>
+
+                <div class="cert-card reveal" style="transition-delay: 0.3s;" onclick="openCert('BRC Food')">
+                    <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+                    <h4 class="text-white">BRC Food</h4>
+                    <p style="font-size:0.8rem; color:var(--color-muted); margin-top:5px;">Global Standard for Food Safety</p>
+                </div>
+
+                <div class="cert-card reveal" style="transition-delay: 0.4s;" onclick="openCert('US FDA')">
+                    <div class="cert-icon"><i class="fas fa-file-invoice"></i></div>
+                    <h4 class="text-white">US FDA</h4>
+                    <p style="font-size:0.8rem; color:var(--color-muted); margin-top:5px;">Food & Drug Administration Registered</p>
+                </div>
+
+                <div class="cert-card reveal" style="transition-delay: 0.5s;" onclick="openCert('Dolphin Safe')">
+                    <div class="cert-icon"><i class="fas fa-fish-fins"></i></div>
+                    <h4 class="text-white">Dolphin Safe</h4>
+                    <p style="font-size:0.8rem; color:var(--color-muted); margin-top:5px;">Earth Island Institute Certified</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certification Modal Overlay -->
+    <div class="modal-overlay" id="cert-modal-overlay"></div>
+    <div class="modal-content" id="cert-modal-content">
+        <span class="modal-close-btn" id="close-cert-modal"><i class="fas fa-times"></i></span>
+        <div id="cert-modal-target">
+            <!-- Populated via JS -->
+        </div>
+    </div>
+
+    <!-- JS Files -->
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const overlay = document.getElementById("cert-modal-overlay");
+            const modal = document.getElementById("cert-modal-content");
+            const closeBtn = document.getElementById("close-cert-modal");
+            const target = document.getElementById("cert-modal-target");
+
+            const certDetails = {
+                "HACCP": {
+                    title: "HACCP Food Safety Certificate",
+                    org: "SGS International Inspection Services",
+                    validity: "Valid through June 2027",
+                    desc: "HACCP dictates rigorous sanitary checkpoints throughout offloading, gutting, freezing, and loading stages. Our systems are verified annually for absolute biological, chemical, and physical risk prevention.",
+                    file: "HACCP_Certificate_WishHoldings_2026.pdf"
+                },
+                "FSSC 22000": {
+                    title: "FSSC 22000 Quality Audit",
+                    org: "Bureau Veritas Assurance",
+                    validity: "Valid through October 2027",
+                    desc: "An ISO-based food safety management standard. This certification validates our state-of-the-art automated temperature logging systems, training protocols, and structural hazard management.",
+                    file: "FSSC22000_Certificate_WishHoldings.pdf"
+                },
+                "BRC Food": {
+                    title: "BRCGS Food Safety Certificate - Grade AA",
+                    org: "BRC Global Standards Group",
+                    validity: "Valid through February 2028",
+                    desc: "Achieved the highest Grade AA status during our unannounced factory audit. BRC compliance confirms our manufacturing hygiene, staff sanitation controls, and product trace records.",
+                    file: "BRC_Food_AA_WishHoldings.pdf"
+                },
+                "US FDA": {
+                    title: "US FDA Registration Credentials",
+                    org: "United States Food and Drug Administration",
+                    validity: "Active Facility Registration #19488203991",
+                    desc: "Authorized to export food and beverage commodities to the United States market. Our production line operates under regular compliance reporting aligned with the US Food Safety Modernization Act.",
+                    file: "FDA_Facility_Registration_WishHoldings.pdf"
+                },
+                "Dolphin Safe": {
+                    title: "Dolphin Safe Fishing Accreditation",
+                    org: "Earth Island Institute Marine Division",
+                    validity: "Perpetual audit model verified",
+                    desc: "Verifies that zero drift nets, purse seines, or fish aggregating devices (FADs) that endanger marine life were used. Handline and pole-and-line harvesting are audited at dockside.",
+                    file: "Dolphin_Safe_Certificate_WishHoldings.pdf"
+                }
+            };
+
+            window.openCert = function(key) {
+                const info = certDetails[key];
+                if (!info) return;
+
+                target.innerHTML = `
+                    <span class="section-subtitle">Corporate Credentials</span>
+                    <h2 class="text-white" style="margin-bottom: var(--spacing-sm);">${info.title}</h2>
+                    <p style="font-size:0.85rem; color:var(--color-accent); font-weight:600; margin-bottom:var(--spacing-md); text-transform:uppercase;">
+                        Authority: ${info.org} | ${info.validity}
+                    </p>
+                    <p style="font-size:0.95rem; line-height:1.6; margin-bottom:var(--spacing-lg);">
+                        ${info.desc}
+                    </p>
+                    <div style="display:flex; gap:10px;">
+                        <button onclick="downloadCertFile('${info.file}')" class="btn btn-primary"><i class="fas fa-file-pdf"></i> Download PDF Certificate</button>
+                        <button onclick="closeModal()" class="btn btn-outline">Close Window</button>
+                    </div>
+                `;
+
+                overlay.classList.add("active");
+                modal.classList.add("active");
+            };
+
+            window.downloadCertFile = function(fileName) {
+                alert(`Starting download: ${fileName}\nFetching audited certificate documents from corporate archives.`);
+            };
+
+            window.closeModal = function() {
+                overlay.classList.remove("active");
+                modal.classList.remove("active");
+            };
+
+            if (closeBtn) closeBtn.addEventListener("click", closeModal);
+            if (overlay) overlay.addEventListener("click", closeModal);
+        });
+    </script>
+</body>
+</html>

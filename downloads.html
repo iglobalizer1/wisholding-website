@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Centre | Wish Holdings Catalogues, Brochures & Certificates</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Fonts / Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .download-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: var(--border-radius-md);
+            padding: var(--spacing-lg);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: var(--transition-normal);
+            height: 100%;
+        }
+        .download-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--color-accent);
+            background: rgba(255, 255, 255, 0.04);
+        }
+        .file-icon-box {
+            font-size: 2.5rem;
+            color: var(--color-accent);
+            margin-bottom: var(--spacing-sm);
+        }
+        .file-meta {
+            font-size: 0.8rem;
+            color: var(--color-muted);
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Inner Hero -->
+    <section class="inner-hero">
+        <div class="inner-hero-bg"></div>
+        <div class="container text-center">
+            <span class="section-subtitle">Resource Portal</span>
+            <h1 class="text-white">Download Centre</h1>
+            <p style="max-width: 750px; margin: 10px auto 0 auto; font-size: 1.15rem; color: rgba(255, 255, 255, 0.9);">
+                Access official Wish Holdings corporate catalogues, product specification sheets, island master plans, and regulatory certificates.
+            </p>
+        </div>
+    </section>
+
+    <!-- Download Centre Section -->
+    <section class="section-padding" style="background-color: var(--color-primary);">
+        <div class="container">
+            
+            <!-- Category Tabs -->
+            <div class="text-center reveal" style="margin-bottom: var(--spacing-xl);">
+                <div class="tab-buttons" style="flex-wrap: wrap; justify-content: center;">
+                    <button class="tab-btn active" onclick="filterDownloads('all', this)">All Downloads</button>
+                    <button class="tab-btn" onclick="filterDownloads('catalogues', this)">Catalogues</button>
+                    <button class="tab-btn" onclick="filterDownloads('brochures', this)">Brochures & Decks</button>
+                    <button class="tab-btn" onclick="filterDownloads('certificates', this)">Certificates</button>
+                </div>
+            </div>
+
+            <!-- Download Items Grid -->
+            <div class="grid-3" style="gap: var(--spacing-lg);">
+                
+                <!-- Catalogues -->
+                <div class="dl-item catalogues reveal">
+                    <div class="download-card">
+                        <div>
+                            <div class="file-icon-box"><i class="fas fa-file-pdf"></i></div>
+                            <span class="text-gold" style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700;">Catalogue</span>
+                            <h3 class="text-white" style="font-size: 1.25rem; margin: 4px 0 8px 0;">Global Seafood Product Catalogue 2026</h3>
+                            <p style="font-size: 0.9rem;">Comprehensive B2B catalogue detailing Yellowfin, Skipjack, H&G, G&G, loins, and packaging specifications.</p>
+                            <div class="file-meta">Format: PDF | Size: 4.8 MB</div>
+                        </div>
+                        <div style="margin-top: var(--spacing-md);">
+                            <button onclick="triggerDownload('Wish_Holdings_Seafood_Catalogue_2026.pdf')" class="btn btn-primary" style="width: 100%;"><i class="fas fa-download" style="margin-right: 8px;"></i> Download PDF</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dl-item catalogues reveal">
+                    <div class="download-card">
+                        <div>
+                            <div class="file-icon-box"><i class="fas fa-file-pdf"></i></div>
+                            <span class="text-gold" style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700;">Specification Sheet</span>
+                            <h3 class="text-white" style="font-size: 1.25rem; margin: 4px 0 8px 0;">Tuna Loin & Cuts Spec Guide</h3>
+                            <p style="font-size: 0.9rem;">Technical cut specifications, Akami vs Otoro breakdown, master carton dimensions, and temperature control parameters.</p>
+                            <div class="file-meta">Format: PDF | Size: 2.3 MB</div>
+                        </div>
+                        <div style="margin-top: var(--spacing-md);">
+                            <button onclick="triggerDownload('Wish_Tuna_Cuts_Specification_Guide.pdf')" class="btn btn-primary" style="width: 100%;"><i class="fas fa-download" style="margin-right: 8px;"></i> Download PDF</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dl-item catalogues reveal">
+                    <div class="download-card">
+                        <div>
+                            <div class="file-icon-box"><i class="fas fa-file-pdf"></i></div>
+                            <span class="text-gold" style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700;">Catalogue</span>
+                            <h3 class="text-white" style="font-size: 1.25rem; margin: 4px 0 8px 0;">Value-Added Brands Brochure</h3>
+                            <p style="font-size: 0.9rem;">Retail presentation for AQUATUNA™ canned tuna, AZURISH™ fish sausages, and CORALPURE™ pastes.</p>
+                            <div class="file-meta">Format: PDF | Size: 3.1 MB</div>
+                        </div>
+                        <div style="margin-top: var(--spacing-md);">
+                            <button onclick="triggerDownload('Wish_Value_Added_Brands_Brochure.pdf')" class="btn btn-primary" style="width: 100%;"><i class="fas fa-download" style="margin-right: 8px;"></i> Download PDF</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Brochures -->
+                <div class="dl-item brochures reveal">
+                    <div class="download-card">
+                        <div>
+                            <div class="file-icon-box"><i class="fas fa-file-pdf"></i></div>
+                            <span class="text-gold" style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700;">Investor Deck</span>
+                            <h3 class="text-white" style="font-size: 1.25rem; margin: 4px 0 8px 0;">Corporate Capability Deck</h3>
+                            <p style="font-size: 0.9rem;">Overview of company assets, processing infrastructure, revenue models, and ethical ocean investment opportunities.</p>
+                            <div class="file-meta">Format: PDF | Size: 5.6 MB</div>
+                        </div>
+                        <div style="margin-top: var(--spacing-md);">
+                            <button onclick="triggerDownload('Wish_Holdings_Corporate_Deck_2026.pdf')" class="btn btn-primary" style="width: 100%;"><i class="fas fa-download" style="margin-right: 8px;"></i> Download PDF</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dl-item brochures reveal">
+                    <div class="download-card">
+                        <div>
+                            <div class="file-icon-box"><i class="fas fa-file-pdf"></i></div>
+                            <span class="text-gold" style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700;">Brochure</span>
+                            <h3 class="text-white" style="font-size: 1.25rem; margin: 4px 0 8px 0;">Wish Harbour Islands Master Plan</h3>
+                            <p style="font-size: 0.9rem;">Comprehensive development plan for Himmafushi, Kandholhudhoo, and Kanandhoo harbour islands.</p>
+                            <div class="file-meta">Format: PDF | Size: 6.2 MB</div>
+                        </div>
+                        <div style="margin-top: var(--spacing-md);">
+                            <button onclick="triggerDownload('Wish_Harbour_Islands_Master_Plan.pdf')" class="btn btn-primary" style="width: 100%;"><i class="fas fa-download" style="margin-right: 8px;"></i> Download PDF</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dl-item brochures reveal">
+                    <div class="download-card">
+                        <div>
+                            <div class="file-icon-box"><i class="fas fa-file-pdf"></i></div>
+                            <span class="text-gold" style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700;">Report</span>
+                            <h3 class="text-white" style="font-size: 1.25rem; margin: 4px 0 8px 0;">ESG & Sustainability Brief</h3>
+                            <p style="font-size: 0.9rem;">Report on solar energy integration, zero-waste marine manufacturing, and pole-and-line conservation impact.</p>
+                            <div class="file-meta">Format: PDF | Size: 1.9 MB</div>
+                        </div>
+                        <div style="margin-top: var(--spacing-md);">
+                            <button onclick="triggerDownload('Wish_ESG_Sustainability_Report_2026.pdf')" class="btn btn-primary" style="width: 100%;"><i class="fas fa-download" style="margin-right: 8px;"></i> Download PDF</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certificates -->
+                <div class="dl-item certificates reveal">
+                    <div class="download-card">
+                        <div>
+                            <div class="file-icon-box"><i class="fas fa-certificate"></i></div>
+                            <span class="text-gold" style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700;">Certificate</span>
+                            <h3 class="text-white" style="font-size: 1.25rem; margin: 4px 0 8px 0;">MSC Chain of Custody Certificate</h3>
+                            <p style="font-size: 0.9rem;">Marine Stewardship Council certification verifying sustainable pole-and-line sourcing.</p>
+                            <div class="file-meta">Format: PDF | Size: 1.1 MB</div>
+                        </div>
+                        <div style="margin-top: var(--spacing-md);">
+                            <button onclick="triggerDownload('Wish_MSC_Chain_of_Custody_Certificate.pdf')" class="btn btn-primary" style="width: 100%;"><i class="fas fa-download" style="margin-right: 8px;"></i> Download PDF</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dl-item certificates reveal">
+                    <div class="download-card">
+                        <div>
+                            <div class="file-icon-box"><i class="fas fa-certificate"></i></div>
+                            <span class="text-gold" style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700;">Certificate</span>
+                            <h3 class="text-white" style="font-size: 1.25rem; margin: 4px 0 8px 0;">HACCP & ISO 22000 Approvals</h3>
+                            <p style="font-size: 0.9rem;">Official food safety management system certifications for WISH CORALIA Himmafushi plant.</p>
+                            <div class="file-meta">Format: PDF | Size: 1.4 MB</div>
+                        </div>
+                        <div style="margin-top: var(--spacing-md);">
+                            <button onclick="triggerDownload('Wish_HACCP_ISO22000_Certificates.pdf')" class="btn btn-primary" style="width: 100%;"><i class="fas fa-download" style="margin-right: 8px;"></i> Download PDF</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dl-item certificates reveal">
+                    <div class="download-card">
+                        <div>
+                            <div class="file-icon-box"><i class="fas fa-certificate"></i></div>
+                            <span class="text-gold" style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700;">Certificate</span>
+                            <h3 class="text-white" style="font-size: 1.25rem; margin: 4px 0 8px 0;">EU Export Clearance & FDA Docs</h3>
+                            <p style="font-size: 0.9rem;">European Union sanitary clearance approval code and US FDA registration documentation.</p>
+                            <div class="file-meta">Format: PDF | Size: 1.6 MB</div>
+                        </div>
+                        <div style="margin-top: var(--spacing-md);">
+                            <button onclick="triggerDownload('Wish_EU_FDA_Export_Approvals.pdf')" class="btn btn-primary" style="width: 100%;"><i class="fas fa-download" style="margin-right: 8px;"></i> Download PDF</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- JS Files -->
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        function filterDownloads(category, btn) {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const items = document.querySelectorAll('.dl-item');
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        function triggerDownload(fileName) {
+            alert(`Preparing download for: ${fileName}\nThank you for accessing the Wish Holdings Resource Centre.`);
+        }
+    </script>
+</body>
+</html>

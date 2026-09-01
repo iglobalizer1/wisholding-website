@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Wish Holdings</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Fonts / Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-lg);
+        }
+        .gallery-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: var(--border-radius-md);
+            overflow: hidden;
+            transition: var(--transition-normal);
+        }
+        .gallery-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--color-accent);
+            background: rgba(255, 255, 255, 0.04);
+        }
+        .gallery-img-box {
+            height: 240px;
+            overflow: hidden;
+            position: relative;
+        }
+        .gallery-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-slow);
+        }
+        .gallery-card:hover .gallery-img-box img {
+            transform: scale(1.08);
+        }
+        .gallery-info {
+            padding: var(--spacing-md);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Inner Hero -->
+    <section class="inner-hero">
+        <div class="inner-hero-bg"></div>
+        <div class="container text-center">
+            <span class="section-subtitle">Visual Experience</span>
+            <h1 class="text-white">Gallery</h1>
+            <p style="max-width: 750px; margin: 10px auto 0 auto; font-size: 1.15rem; color: rgba(255, 255, 255, 0.9);">
+                Explore the three strategic islands of Wish Harbour — Himmafushi, Kandholhudhoo, and Kanandhoo — each powering sustainable fisheries, marine conservation, and eco-tourism innovation.
+            </p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section-padding" style="background-color: var(--color-primary);">
+        <div class="container">
+            
+            <!-- Category Tabs -->
+            <div class="text-center reveal" style="margin-bottom: var(--spacing-lg);">
+                <div class="tab-buttons" style="flex-wrap: wrap; justify-content: center;">
+                    <button class="tab-btn active" onclick="filterGallery('all', this)">All</button>
+                    <button class="tab-btn" onclick="filterGallery('wish-harbour', this)">Wish Harbour</button>
+                    <button class="tab-btn" onclick="filterGallery('processing', this)">Processing & Cold Chain</button>
+                    <button class="tab-btn" onclick="filterGallery('products', this)">Products</button>
+                    <button class="tab-btn" onclick="filterGallery('glaciala', this)">GLACIALA™ Ice Systems</button>
+                </div>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid" id="gallery-container">
+                <!-- Wish Harbour Items -->
+                <div class="gallery-card reveal g-item wish-harbour">
+                    <div class="gallery-img-box">
+                        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=800" alt="Himmafushi Processing Complex">
+                    </div>
+                    <div class="gallery-info">
+                        <span class="text-gold" style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700;">Wish Harbour</span>
+                        <h3 class="text-white" style="font-size: 1.2rem; margin: 4px 0 6px 0;">Himmafushi Island</h3>
+                        <p style="font-size: 0.85rem;">The industrial cornerstone powering tuna processing and export operations.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card reveal g-item wish-harbour">
+                    <div class="gallery-img-box">
+                        <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&q=80&w=800" alt="Kandholhudhoo Eco Villas">
+                    </div>
+                    <div class="gallery-info">
+                        <span class="text-gold" style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700;">Wish Harbour</span>
+                        <h3 class="text-white" style="font-size: 1.2rem; margin: 4px 0 6px 0;">Kandholhudhoo Island</h3>
+                        <p style="font-size: 0.85rem;">Marine conservation hub and 30 eco-conscious oceanfront villas.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card reveal g-item wish-harbour">
+                    <div class="gallery-img-box">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800" alt="Kanandhoo Development">
+                    </div>
+                    <div class="gallery-info">
+                        <span class="text-gold" style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700;">Wish Harbour</span>
+                        <h3 class="text-white" style="font-size: 1.2rem; margin: 4px 0 6px 0;">Kanandhoo Island</h3>
+                        <p style="font-size: 0.85rem;">Balanced progress integrating 50 luxury villas with sustainable tuna expansion.</p>
+                    </div>
+                </div>
+
+                <!-- Processing & Cold Chain Items -->
+                <div class="gallery-card reveal g-item processing">
+                    <div class="gallery-img-box">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800" alt="Cold Chain Infrastructure">
+                    </div>
+                    <div class="gallery-info">
+                        <span class="text-gold" style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700;">Processing & Cold Chain</span>
+                        <h3 class="text-white" style="font-size: 1.2rem; margin: 4px 0 6px 0;">WISH CORALIA Plant</h3>
+                        <p style="font-size: 0.85rem;">Export-grade processing facility with blast-freezing capability.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card reveal g-item processing">
+                    <div class="gallery-img-box">
+                        <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80&w=800" alt="Frostline Cold Storage">
+                    </div>
+                    <div class="gallery-info">
+                        <span class="text-gold" style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700;">Processing & Cold Chain</span>
+                        <h3 class="text-white" style="font-size: 1.2rem; margin: 4px 0 6px 0;">Frostline Storage Network</h3>
+                        <p style="font-size: 0.85rem;">Multi-island cold storage network maintaining unbroken preservation.</p>
+                    </div>
+                </div>
+
+                <!-- Product Items -->
+                <div class="gallery-card reveal g-item products">
+                    <div class="gallery-img-box">
+                        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=800" alt="Yellowfin Tuna Loin">
+                    </div>
+                    <div class="gallery-info">
+                        <span class="text-gold" style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700;">Products</span>
+                        <h3 class="text-white" style="font-size: 1.2rem; margin: 4px 0 6px 0;">Yellowfin Tuna Loin</h3>
+                        <p style="font-size: 0.85rem;">Line-caught premium Akami and Otoro cuts ready for global export.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card reveal g-item products">
+                    <div class="gallery-img-box">
+                        <img src="https://images.unsplash.com/photo-1534483509719-3feaee7c30da?auto=format&fit=crop&q=80&w=800" alt="Frozen Skipjack Tuna">
+                    </div>
+                    <div class="gallery-info">
+                        <span class="text-gold" style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700;">Products</span>
+                        <h3 class="text-white" style="font-size: 1.2rem; margin: 4px 0 6px 0;">Skipjack Tuna</h3>
+                        <p style="font-size: 0.85rem;">Pole-and-line harvested whole round frozen Skipjack Tuna.</p>
+                    </div>
+                </div>
+
+                <!-- GLACIALA Items -->
+                <div class="gallery-card reveal g-item glaciala">
+                    <div class="gallery-img-box">
+                        <img src="https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?auto=format&fit=crop&q=80&w=800" alt="GLACIALA Ice Systems">
+                    </div>
+                    <div class="gallery-info">
+                        <span class="text-gold" style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700;">GLACIALA™ Ice Systems</span>
+                        <h3 class="text-white" style="font-size: 1.2rem; margin: 4px 0 6px 0;">GLACIALA™ Ice Plant</h3>
+                        <p style="font-size: 0.85rem;">Advanced ice production supporting vessel fleets and storage logistics.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JS Files -->
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        function filterGallery(category, btn) {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const items = document.querySelectorAll('.g-item');
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Divisions | Corporate Portfolio - Wish Holdings</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Fonts / Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Division details styling */
+        .division-detail-section {
+            padding: var(--spacing-xl) 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .division-detail-section:last-child {
+            border-bottom: none;
+        }
+        .division-icon {
+            font-size: 3rem;
+            color: var(--color-accent);
+            margin-bottom: var(--spacing-sm);
+        }
+        .spec-list {
+            margin-top: var(--spacing-md);
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        .spec-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.95rem;
+            color: var(--color-light);
+        }
+        .spec-item i {
+            color: var(--color-accent);
+            width: 20px;
+        }
+        @media (max-width: 768px) {
+            .spec-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Inner Page Header -->
+    <section class="inner-hero">
+        <div class="inner-hero-bg"></div>
+        <div class="container text-center">
+            <span class="section-subtitle">Corporate Portfolio</span>
+            <h1 class="text-white">Business Divisions</h1>
+            <p style="max-width: 600px; margin: 10px auto 0 auto;">Our operations span sustainable marine harvesting, solar cold logistics, port developments, and renewable power infrastructure.</p>
+        </div>
+    </section>
+
+    <!-- Division 1: Seafood -->
+    <section id="seafood" class="division-detail-section" style="background-color: var(--color-primary);">
+        <div class="container">
+            <div class="grid-2" style="align-items: center; gap: var(--spacing-xl);">
+                <div class="reveal">
+                    <div class="division-icon"><i class="fas fa-fish"></i></div>
+                    <span class="section-subtitle">Division 01</span>
+                    <h2 class="text-white" style="margin-bottom: var(--spacing-md);">Sustainable Seafood & Industrial Exports</h2>
+                    <p style="margin-bottom: var(--spacing-sm);">
+                        The core commercial driver of Wish Holdings is our integrated seafood sourcing, processing, and export operation. We collect high-grade skipjack and yellowfin tuna caught individually by Maldivian fishing crews using zero-net pole-and-line techniques.
+                    </p>
+                    <p style="margin-bottom: var(--spacing-sm);">
+                        This premium catch is brought within hours to our processing facilities, where it undergoes inspection, temperature audits, and cut classification under rigorous food safety certificates (HACCP, FSSC 22000). We export chilled loins, super-frozen blocks, and our retail canned lines.
+                    </p>
+                    <div class="spec-list">
+                        <div class="spec-item"><i class="fas fa-check-circle"></i> 100% Traceability to vessel</div>
+                        <div class="spec-item"><i class="fas fa-check-circle"></i> Pole & line handline methods</div>
+                        <div class="spec-item"><i class="fas fa-check-circle"></i> Blast Freezing at -40°C & -60°C</div>
+                        <div class="spec-item"><i class="fas fa-check-circle"></i> Canned & value-added brands</div>
+                    </div>
+                    <div style="margin-top: var(--spacing-md);">
+                        <a href="products.html" class="btn btn-primary">Browse Product Catalog</a>
+                    </div>
+                </div>
+                <div class="reveal hover-zoom-container" style="transition-delay: 0.1s; border-radius: var(--border-radius-lg); height: 420px;">
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=800" alt="Seafood Processing Division" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Division 2: Wish Harbour Infrastructure -->
+    <section id="infrastructure" class="division-detail-section" style="background-color: var(--color-secondary);">
+        <div class="container">
+            <div class="grid-2" style="align-items: center; gap: var(--spacing-xl);">
+                <div class="reveal hover-zoom-container" style="border-radius: var(--border-radius-lg); height: 420px;">
+                    <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80&w=800" alt="Marine Infrastructure Construction" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="reveal" style="transition-delay: 0.1s;">
+                    <div class="division-icon"><i class="fas fa-anchor"></i></div>
+                    <span class="section-subtitle">Division 02</span>
+                    <h2 class="text-white" style="margin-bottom: var(--spacing-md);">Wish Harbour Infrastructure & Logistics</h2>
+                    <p style="margin-bottom: var(--spacing-sm);">
+                        Our infrastructure division drives our regional footprint growth. Through the **Wish Harbour Project**, we design and fund marine logistics networks, automated cold-storage warehouses, and processing hubs on selected Maldivian islands (Himmafushi, Kandholhudhoo, and Kanandhoo).
+                    </p>
+                    <p style="margin-bottom: var(--spacing-sm);">
+                        A unique aspect of our projects is the integration of light industrial seafood hubs with eco-tourism. This includes building processing docks alongside luxury tourist accommodations and marine conservation research laboratories.
+                    </p>
+                    <div class="spec-list">
+                        <div class="spec-item"><i class="fas fa-building"></i> Himmafushi Cold storage</div>
+                        <div class="spec-item"><i class="fas fa-map-marked-alt"></i> Kandholhudhoo Expansion</div>
+                        <div class="spec-item"><i class="fas fa-solar-panel"></i> Solar microgrid dockyard</div>
+                        <div class="spec-item"><i class="fas fa-hotel"></i> Sustainable Eco-Resort Integration</div>
+                    </div>
+                    <div style="margin-top: var(--spacing-md);">
+                        <a href="manufacturing.html" class="btn btn-outline">Check Factory Facilities</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Division 3: Energy and CSR -->
+    <section id="energy" class="division-detail-section" style="background-color: var(--color-primary);">
+        <div class="container">
+            <div class="grid-2" style="align-items: center; gap: var(--spacing-xl);">
+                <div class="reveal">
+                    <div class="division-icon"><i class="fas fa-solar-panel"></i></div>
+                    <span class="section-subtitle">Division 03</span>
+                    <h2 class="text-white" style="margin-bottom: var(--spacing-md);">Renewable Energy & Marine CSR</h2>
+                    <p style="margin-bottom: var(--spacing-sm);">
+                        Sustainable action is integrated directly into our holding company structure rather than treated as an afterthought. Our Renewable Energy division builds and runs high-performance photovoltaic microgrids that supply power to our facilities and fleet operations.
+                    </p>
+                    <p style="margin-bottom: var(--spacing-sm);">
+                        Through our marine corporate social responsibility (CSR) programs, we actively fund coral restoration networks, marine waste cleanup initiatives, and educational scholarships for children of local artisanal fishermen cooperatives.
+                    </p>
+                    <div class="spec-list">
+                        <div class="spec-item"><i class="fas fa-sun"></i> 1.2MW Solar Arrays</div>
+                        <div class="spec-item"><i class="fas fa-recycle"></i> Zero Waste Repurposing</div>
+                        <div class="spec-item"><i class="fas fa-seedling"></i> Coral Reef Restoration Grants</div>
+                        <div class="spec-item"><i class="fas fa-university"></i> Fisherman Educational Fund</div>
+                    </div>
+                    <div style="margin-top: var(--spacing-md);">
+                        <a href="sustainability.html" class="btn btn-primary">View Sustainability Policy</a>
+                    </div>
+                </div>
+                <div class="reveal hover-zoom-container" style="transition-delay: 0.1s; border-radius: var(--border-radius-lg); height: 420px;">
+                    <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&q=80&w=800" alt="Solar Farm Clean Energy" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JS Files -->
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

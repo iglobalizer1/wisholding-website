@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wish Holdings | Premium Maldivian Tuna & Seafood</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Fonts / Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-title {
+            margin-bottom: var(--spacing-xs);
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: 800;
+            letter-spacing: -1.5px;
+            color: var(--color-logo-navy);
+        }
+        .hero-tagline {
+            font-family: var(--font-heading);
+            font-size: clamp(1.4rem, 2.5vw, 2.2rem);
+            color: var(--color-accent);
+            font-weight: 700;
+            margin-bottom: var(--spacing-sm);
+        }
+        .hero-subtitle-pills {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: var(--spacing-md);
+        }
+        .hero-pill {
+            background: rgba(2, 132, 199, 0.08);
+            border: 1.5px solid var(--color-accent);
+            color: var(--color-logo-navy);
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        .hero-desc {
+            max-width: 650px;
+            font-size: 1.2rem;
+            margin-bottom: var(--spacing-lg);
+            color: var(--color-text-body);
+            line-height: 1.65;
+            font-weight: 500;
+        }
+        .hero-cta {
+            display: flex;
+            gap: var(--spacing-sm);
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section with Local Video & Light Theme Overlay -->
+    <section class="hero-wrapper">
+        <div class="hero-video-container">
+            <video id="hero-bg-video" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=1920">
+                <source src="video/video.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="hero-overlay"></div>
+        
+        <div class="container" style="position: relative; z-index: 2;">
+            <div class="hero-grid">
+                <!-- Left: Headline & Actions -->
+                <div class="reveal" style="transition-delay: 0.1s;">
+                    <h1 class="hero-title">Wish Holdings</h1>
+                    <div class="hero-tagline">"Hold Your Wish."</div>
+                    <div style="font-size: 1.35rem; color: var(--color-text-heading); font-weight: 600; margin-bottom: var(--spacing-sm);">
+                        Premium Maldivian Tuna & Seafood
+                    </div>
+                    
+                    <div class="hero-subtitle-pills">
+                        <span class="hero-pill"><i class="fas fa-globe-asia" style="margin-right:6px; color: var(--color-accent);"></i> Global Markets</span>
+                        <span class="hero-pill"><i class="fas fa-chart-line" style="margin-right:6px; color: var(--color-accent);"></i> Investors</span>
+                        <span class="hero-pill"><i class="fas fa-handshake" style="margin-right:6px; color: var(--color-accent);"></i> Strategic Partners</span>
+                    </div>
+                    
+                    <p class="hero-desc">
+                        From the Deep. To the World. Indian Ocean sourcing. Export-grade processing.
+                    </p>
+                    
+                    <div class="hero-cta">
+                        <a href="contact.html?type=buyer" class="btn btn-primary"><i class="fas fa-file-invoice" style="margin-right:8px;"></i> Request Export Quote</a>
+                        <a href="invest.html" class="btn btn-outline"><i class="fas fa-chart-pie" style="margin-right:8px;"></i> Explore Investment</a>
+                    </div>
+                </div>
+
+                <!-- Right: Prominent 4K Hero Video Player Showcase -->
+                <div class="reveal" style="transition-delay: 0.2s;">
+                    <div class="hero-video-card">
+                        <div class="video-badge-overlay" style="top: 14px; left: 14px; padding: 4px 12px; font-size: 0.75rem;">
+                            <span class="pulse-dot"></span> 4K Operations Stream
+                        </div>
+                        <video id="hero-feature-video" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=1920">
+                            <source src="video/video.mp4" type="video/mp4">
+                            Your browser does not support HTML5 video.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Products Section -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="text-center reveal" style="max-width: 650px; margin: 0 auto var(--spacing-xl) auto;">
+                <span class="section-subtitle">Live Products</span>
+                <h2>What We Sell Now</h2>
+                <p>Pure, sustainable Maldivian ocean harvests processed to stringent global export standards.</p>
+            </div>
+            
+            <div class="grid-2" style="gap: var(--spacing-lg);">
+                <!-- Yellowfin Tuna -->
+                <div class="product-preview-card reveal" style="transition-delay: 0.1s;">
+                    <div class="product-img-box">
+                        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=800" alt="Yellowfin Tuna">
+                    </div>
+                    <div style="padding: var(--spacing-lg); display: flex; flex-direction: column; flex-grow: 1;">
+                        <span class="text-brand" style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">Thunnus albacares</span>
+                        <h3 style="font-size: 1.6rem; margin-bottom: 8px;">Yellowfin Tuna</h3>
+                        <p style="margin-bottom: var(--spacing-md); line-height: 1.6;">
+                            The Ocean's Golden Catch — premium, line-caught Maldivian tuna.
+                        </p>
+                        <div style="margin-top: auto;">
+                            <a href="yellowfin.html" class="btn btn-primary" style="width: 100%;"><i class="fas fa-arrow-right" style="margin-left: 8px;"></i> View Product</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skipjack Tuna -->
+                <div class="product-preview-card reveal" style="transition-delay: 0.2s;">
+                    <div class="product-img-box">
+                        <img src="https://images.unsplash.com/photo-1534483509719-3feaee7c30da?auto=format&fit=crop&q=80&w=800" alt="Skipjack Tuna">
+                    </div>
+                    <div style="padding: var(--spacing-lg); display: flex; flex-direction: column; flex-grow: 1;">
+                        <span class="text-brand" style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">Katsuwonus pelamis</span>
+                        <h3 style="font-size: 1.6rem; margin-bottom: 8px;">Skipjack Tuna</h3>
+                        <p style="margin-bottom: var(--spacing-md); line-height: 1.6;">
+                            The Heart of the Maldivian Fishery — pole-and-line caught with full traceability.
+                        </p>
+                        <div style="margin-top: auto;">
+                            <a href="skipjack.html" class="btn btn-primary" style="width: 100%;"><i class="fas fa-arrow-right" style="margin-left: 8px;"></i> View Product</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Future Vision Section -->
+    <section class="section-padding bg-subtle">
+        <div class="container">
+            <div class="flex-center" style="justify-content: space-between; align-items: flex-end; margin-bottom: var(--spacing-xl); flex-wrap: wrap; gap: var(--spacing-sm);">
+                <div class="reveal">
+                    <span class="section-subtitle">Future Vision</span>
+                    <h2 style="margin-bottom: 0;">The Ecosystem We're Building</h2>
+                </div>
+                <div class="reveal">
+                    <a href="way-forward.html" class="btn btn-outline"><i class="fas fa-compass" style="margin-right: 8px;"></i> View Future Vision</a>
+                </div>
+            </div>
+
+            <div class="grid-3">
+                <!-- Himmafushi -->
+                <div class="island-card reveal" style="transition-delay: 0.1s;">
+                    <span class="island-status status-live"><i class="fas fa-check-circle" style="margin-right: 5px;"></i> LIVE</span>
+                    <h3 style="margin-bottom: 8px;">Himmafushi</h3>
+                    <p style="font-weight: 600; font-size: 1.05rem; color: var(--color-text-heading); margin-bottom: 10px;">Tuna processing today</p>
+                    <p style="font-size: 0.92rem;">
+                        State-of-the-art tuna processing and cold storage facility handling export-grade Yellowfin & Skipjack tuna with full catch-to-package traceability.
+                    </p>
+                </div>
+
+                <!-- Kandholhudhoo -->
+                <div class="island-card reveal" style="transition-delay: 0.2s;">
+                    <span class="island-status status-planned"><i class="fas fa-clock" style="margin-right: 5px;"></i> PLANNED</span>
+                    <h3 style="margin-bottom: 8px;">Kandholhudhoo</h3>
+                    <p style="font-weight: 600; font-size: 1.05rem; color: var(--color-text-heading); margin-bottom: 10px;">Reef + conservation + 30 villas</p>
+                    <p style="font-size: 0.92rem;">
+                        Reef fish processing plant, cold storage, marine conservation hub, guided ecology tours, and 30 eco-villas blending sustainability with luxury.
+                    </p>
+                </div>
+
+                <!-- Kanandhoo -->
+                <div class="island-card reveal" style="transition-delay: 0.3s;">
+                    <span class="island-status status-planned"><i class="fas fa-clock" style="margin-right: 5px;"></i> PLANNED</span>
+                    <h3 style="margin-bottom: 8px;">Kanandhoo</h3>
+                    <p style="font-weight: 600; font-size: 1.05rem; color: var(--color-text-heading); margin-bottom: 10px;">Tuna expansion + 50 villas</p>
+                    <p style="font-size: 0.92rem;">
+                        Expanded tuna processing infrastructure, multi-island cold storage, strict environmental protocols, and 50 oceanfront luxury villas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Quality Section -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="text-center reveal" style="max-width: 650px; margin: 0 auto var(--spacing-xl) auto;">
+                <span class="section-subtitle">Trust & Quality</span>
+                <h2>Why Buyers Trust Us</h2>
+                <p>Uncompromising adherence to international safety, ecological integrity, and unbroken cold-chain supply.</p>
+            </div>
+
+            <div class="grid-3" style="gap: var(--spacing-md); margin-bottom: var(--spacing-xl);">
+                <div class="trust-card reveal" style="transition-delay: 0.1s;">
+                    <h4 style="margin-bottom: 6px;"><i class="fas fa-fish text-brand" style="margin-right: 8px;"></i> Pole-and-Line / Handline Sourcing</h4>
+                    <p>Sustainable fishing methods ensuring exceptional fish quality, minimal bycatch, and complete marine ecosystem protection.</p>
+                </div>
+
+                <div class="trust-card reveal" style="transition-delay: 0.2s;">
+                    <h4 style="margin-bottom: 6px;"><i class="fas fa-barcode text-brand" style="margin-right: 8px;"></i> Traceability</h4>
+                    <p>Full catch-to-export tracking system designed to meet strict international export-grade regulatory requirements.</p>
+                </div>
+
+                <div class="trust-card reveal" style="transition-delay: 0.3s;">
+                    <h4 style="margin-bottom: 6px;"><i class="fas fa-snowflake text-brand" style="margin-right: 8px;"></i> Cold-Chain Discipline</h4>
+                    <p>Unbroken temperature-controlled cold chain from ocean harvest to export loading, strictly aligned with EU-grade standards.</p>
+                </div>
+
+                <div class="trust-card reveal" style="transition-delay: 0.4s;">
+                    <h4 style="margin-bottom: 6px;"><i class="fas fa-pump-medical text-brand" style="margin-right: 8px;"></i> Hygiene Systems</h4>
+                    <p>Export-grade workflow with continuous temperature-controlled processing, sanitization, and food safety protocols.</p>
+                </div>
+
+                <div class="trust-card reveal" style="transition-delay: 0.5s;">
+                    <h4 style="margin-bottom: 6px;"><i class="fas fa-users text-brand" style="margin-right: 8px;"></i> Sustainability & Community</h4>
+                    <p>Direct economic partnerships with traditional Maldivian fishermen and active island community engagement programs.</p>
+                </div>
+
+                <div class="trust-card reveal" style="transition-delay: 0.6s;">
+                    <h4 style="margin-bottom: 6px;"><i class="fas fa-certificate text-brand" style="margin-right: 8px;"></i> Export-Grade Standards</h4>
+                    <p>Modern processing architecture specifically designed to meet demanding EU, US FDA, and Asian import regulations.</p>
+                </div>
+            </div>
+
+            <div class="text-center reveal">
+                <a href="contact.html?type=buyer" class="btn btn-primary"><i class="fas fa-comments" style="margin-right: 8px;"></i> Talk to Sales</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dedicated Bottom Video Showcase Section -->
+    <section class="section-padding video-showcase-section" id="operations-showcase">
+        <div class="container">
+            <div class="text-center reveal" style="max-width: 740px; margin: 0 auto var(--spacing-xl) auto;">
+                <span class="section-subtitle">Oceanic Excellence</span>
+                <h2>Watch Our Ocean-to-Package Operations</h2>
+                <p>From sustainable handline catch in pristine Maldivian waters to export-grade cryogenic processing and global cold-chain distribution.</p>
+            </div>
+
+            <!-- Video Player Showcase Frame -->
+            <div class="video-showcase-card reveal" style="max-width: 1060px; margin: 0 auto;">
+                <div class="video-badge-overlay">
+                    <span class="pulse-dot"></span> 4K Operations Stream
+                </div>
+                <div class="video-showcase-player-wrapper">
+                    <video autoplay muted loop playsinline controls poster="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=1920">
+                        <source src="video/video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <!-- Operational Highlights Grid -->
+            <div class="video-features-grid" style="max-width: 1060px; margin-left: auto; margin-right: auto;">
+                <div class="video-feature-card reveal" style="transition-delay: 0.1s;">
+                    <div class="video-feature-icon"><i class="fas fa-snowflake text-brand"></i></div>
+                    <h4>-60°C Ultra-Low Freezing</h4>
+                    <p style="font-size: 0.9rem; margin-bottom: 0;">Preserves sashimi-grade cellular texture and peak nutritional freshness from boat to destination.</p>
+                </div>
+
+                <div class="video-feature-card reveal" style="transition-delay: 0.2s;">
+                    <div class="video-feature-icon"><i class="fas fa-barcode text-brand"></i></div>
+                    <h4>100% Catch Traceability</h4>
+                    <p style="font-size: 0.9rem; margin-bottom: 0;">Vessel-level GPS data and catch certificate validation meet stringent EU & US FDA import laws.</p>
+                </div>
+
+                <div class="video-feature-card reveal" style="transition-delay: 0.3s;">
+                    <div class="video-feature-icon"><i class="fas fa-award text-brand"></i></div>
+                    <h4>EU & Global Certifications</h4>
+                    <p style="font-size: 0.9rem; margin-bottom: 0;">Multi-island processing architecture meeting HACCP, BRCGS, and ISO 22000 hygiene benchmarks.</p>
+                </div>
+
+                <div class="video-feature-card reveal" style="transition-delay: 0.4s;">
+                    <div class="video-feature-icon"><i class="fas fa-plane-departure text-brand"></i></div>
+                    <h4>Direct Air & Sea Logistics</h4>
+                    <p style="font-size: 0.9rem; margin-bottom: 0;">Direct cold-chain dispatch via Velana International Airport and Malé maritime container terminals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Preview Section -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="text-center reveal" style="max-width: 650px; margin: 0 auto var(--spacing-xl) auto;">
+                <span class="section-subtitle">Investment</span>
+                <h2>Investor Preview</h2>
+                <p>Combining sustainable fisheries infrastructure with eco-tourism brand equity for resilient long-term returns.</p>
+            </div>
+
+            <div class="grid-3" style="margin-bottom: var(--spacing-xl);">
+                <div class="glass-card reveal" style="transition-delay: 0.1s;">
+                    <div style="font-size: 2rem; color: var(--color-accent); margin-bottom: var(--spacing-sm);"><i class="fas fa-shield-alt"></i></div>
+                    <h3 style="margin-bottom: var(--spacing-xs);">Supply Security</h3>
+                    <p>Company-owned lands, strategic harbour island locations, and direct contracts with Maldivian fishermen ensure consistent raw material supply.</p>
+                </div>
+
+                <div class="glass-card reveal" style="transition-delay: 0.2s;">
+                    <div style="font-size: 2rem; color: var(--color-accent); margin-bottom: var(--spacing-sm);"><i class="fas fa-industry"></i></div>
+                    <h3 style="margin-bottom: var(--spacing-xs);">Infrastructure Expansion</h3>
+                    <p>Multi-island processing, Frostline cold storage, and GLACIALA™ ice production systems create a fully integrated oceanic value chain.</p>
+                </div>
+
+                <div class="glass-card reveal" style="transition-delay: 0.3s;">
+                    <div style="font-size: 2rem; color: var(--color-accent); margin-bottom: var(--spacing-sm);"><i class="fas fa-hotel"></i></div>
+                    <h3 style="margin-bottom: var(--spacing-xs);">ESG & Brand Equity</h3>
+                    <p>Tourism + Brand Equity. Luxury villas and premium eco-tourism experiences enhance brand valuation and diversify company revenue streams.</p>
+                </div>
+            </div>
+
+            <div class="text-center reveal">
+                <a href="invest.html" class="btn btn-primary"><i class="fas fa-file-pdf" style="margin-right: 8px;"></i> Request Investor Deck</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- JS Files -->
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
